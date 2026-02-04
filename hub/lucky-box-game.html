@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lucky-box-game - Elite Vision</title>
+    <link rel="icon" type="image/png" href="logo.jpg">   
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <link rel="stylesheet" href="logo.css">
+      <!-- Ads zones--
+  <meta name="34f0468adc675355fcb44a4d553ad0b931d947e1" content="34f0468adc675355fcb44a4d553ad0b931d947e1" />
+
+     <!-- Notification zone--
+  <script>
+(function(nqs){
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = nqs || {};
+s.src = "\/\/remorseful-cancel.com\/baX.VnsUdYGvl\/0hYmWYcP\/Pe\/mY9tuoZdUYltkDPsTPYN3jM_zRYXziM\/j\/Y\/tONSj_c\/zWN-jeMtykNNwB";
+s.async = true;
+s.referrerPolicy = 'no-referrer-when-downgrade';
+l.parentNode.insertBefore(s, l);
+})({})
+</script>
+  <!-- Multi banner --
+  <script>
+(function(iwaoj){
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = iwaoj || {};
+s.src = "\/\/remorseful-cancel.com\/bYXMV.sKdTGilW0iYSW_cU\/BeSm\/9\/uTZvUjlVkSPlTmYP3SMezRYYzpM\/z\/AetzN\/jPc\/zmNxjmMkzMMtQe";
+s.async = true;
+s.referrerPolicy = 'no-referrer-when-downgrade';
+l.parentNode.insertBefore(s, l);
+})({})
+</script>
+    
+ <!-- New ads is here-->
+   <script src="https://momrollback.com/6b/cb/a2/6bcba2de7329e46bc42e89b77edcb96e.js"></script>
+ <script>
+  atOptions = {
+    'key' : 'c027e155f37d2153a99f3519eef05131',
+    'format' : 'iframe',
+    'height' : 60,
+    'width' : 468,
+    'params' : {}
+  };
+</script>
+<script src="https://momrollback.com/c027e155f37d2153a99f3519eef05131/invoke.js"></script>
+<!-- AGAIN NEW SCRIPT-->
+    <!--<script src="https://quge5.com/88/tag.min.js" data-zone="202196" async data-cfasync="false"></script>-->
+<script>(function(s){s.dataset.zone='10466480',s.src='https://al5sm.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
+ 
+    <style>
+        :root {
+            --primary-green: #10B981;
+            --secondary-green: #34D399;
+            --dark-green: #047857;
+            --white: #FFFFFF;
+            --light-bg: #F8FAFC;
+            --light-grey: #E2E8F0;
+            --dark-bg: #0F172A;
+            --card-dark: #1E293B;
+            --text-color: #334155;
+            --text-light: #64748B;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --error-red: #EF4444;
+            --warning: #F59E0B;
+            --success: #10B981;
+            --purple: #8B5CF6;
+            --blue: #3B82F6;
+            --gold: #F59E0B;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 50%, #bbf7d0 100%);
+            color: var(--text-color);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        body.dark-mode {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+            color: #E2E8F0;
+        }
+
+        /* Header */
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            box-shadow: var(--shadow);
+            padding: 0 20px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 2px solid var(--primary-green);
+        }
+
+        body.dark-mode .header {
+            background: rgba(30, 41, 59, 0.95);
+            border-bottom: 1px solid rgba(16, 185, 129, 0.2);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-green);
+            text-decoration: none;
+        }
+
+        .logo-image {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+            border-radius: 8px;
+            object-fit: cover;
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .menu-toggle, .theme-toggle {
+            background: rgba(16, 185, 129, 0.1);
+            border: none;
+            font-size: 18px;
+            color: var(--text-color);
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        body.dark-mode .menu-toggle,
+        body.dark-mode .theme-toggle {
+            background: rgba(16, 185, 129, 0.2);
+            color: #E2E8F0;
+        }
+
+        .menu-toggle:hover, .theme-toggle:hover {
+            background: var(--primary-green);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+        }
+
+    /* ================================================= */
+        /* 4. Sidebar Styles */
+        /* ================================================= */
+        .sidebar {
+            width: 280px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: fixed;
+            height: 100vh;
+            z-index: 200;
+            overflow-y: auto;
+            transform: translateX(-100%);
+            left: 0;
+            top: 0;
+background: rgba(16, 185, 129, 0.1);
+border-right: 2px solid var(--primary-green);}
+
+        .sidebar.open {
+            transform: translateX(0);
+        }
+
+        .sidebar-header {
+            padding: 24px 20px;
+            border-bottom: 1px solid var(--light-grey);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .close-sidebar {
+            background: none;
+            border: none;
+            font-size: 20px;
+            color: white;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .close-sidebar:hover {
+            color: var(--primary-green);
+        }
+
+        .sidebar-menu {
+            padding: 20px 0;
+        }
+
+        .menu-item {
+            padding: 14px 20px;
+            display: flex;
+            align-items: center;
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+            position: relative;
+            border-radius: 0 12px 12px 0;
+            margin: 5px 0;
+        }
+
+        .menu-item:hover {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), transparent);
+            color: var(--primary-green);
+            padding-left: 25px;
+            transform: translateX(5px);
+        }
+
+        .menu-item.active {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), transparent);
+            color: var(--primary-green);
+            border-right: 3px solid var(--primary-green);
+        }
+
+        .menu-item i {
+            margin-right: 12px;
+            font-size: 18px;
+            width: 24px;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .menu-item:hover i {
+            transform: scale(1.2);
+        }
+
+        .menu-dropdown {
+            position: relative;
+        }
+
+        .dropdown-toggle {
+            width: 70px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .dropdown-toggle::after {
+            content: '\f107';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            transition: var(--transition);
+        }
+
+        .menu-dropdown.active .dropdown-toggle::after {
+            transform: rotate(180deg);
+        }
+
+        .dropdown-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            background: rgba(16, 185, 129, 0.03);
+        }
+
+        .menu-dropdown.active .dropdown-menu {
+            max-height: 500px;
+        }
+
+        .dropdown-item {
+            padding: 12px 20px 12px 56px;
+            display: flex;
+            align-items: center;
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 14px;
+        }
+
+        .dropdown-item:hover {
+            background: rgba(16, 185, 129, 0.08);
+            color: var(--primary-green);
+            padding-left: 60px;
+        }
+
+        .dropdown-item i {
+            font-size: 14px;
+            margin-right: 10px;
+            transition: var(--transition);
+        }
+
+        .dropdown-item:hover i {
+            transform: scale(1.1);
+        }
+
+        .sidebar-profile {
+            padding: 20px;
+            border-top: 1px solid var(--light-grey);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .sidebar-profile:hover {
+            background: rgba(16, 185, 129, 0.05);
+        }
+
+        .sidebar-profile-img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--primary-green);
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+        }
+
+        .sidebar-profile-info {
+            flex: 1;
+        }
+
+        .sidebar-profile-name {
+            font-weight: 600;
+            font-size: 16px;
+            color: white;
+        }
+
+        .sidebar-profile-role {
+            font-size: 12px;
+            color: white;
+        }
+
+        .sidebar-profile-settings {
+            background: none;
+            border: none;
+            color: var(--primary-green);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .sidebar-profile-settings:hover {
+            color: var(--primary-green);
+            transform: rotate(90deg);
+        }
+
+    
+        /* Sidebar /
+        .sidebar {
+            width: 280px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: fixed;
+            height: 100vh;
+            z-index: 200;
+            overflow-y: auto;
+            transform: translateX(-100%);
+            left: 0;
+            top: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        body.dark-mode .sidebar {
+            background: rgba(30, 41, 59, 0.95);
+        }
+
+        .sidebar.open {
+            transform: translateX(0);
+        }
+
+        .sidebar-header {
+            padding: 24px 20px;
+            border-bottom: 1px solid var(--light-grey);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        body.dark-mode .sidebar-header {
+            border-bottom: 1px solid #334155;
+        }
+
+        .close-sidebar {
+            background: none;
+            border: none;
+            font-size: 20px;
+            color: var(--text-light);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .close-sidebar:hover {
+            color: var(--primary-green);
+        }
+
+        .sidebar-menu {
+            flex: 1;
+            padding: 20px 0;
+            overflow-y: auto;
+        }
+
+        .menu-item {
+            padding: 14px 20px;
+            display: flex;
+            align-items: center;
+            color: var(--text-color);
+            text-decoration: none;
+            transition: var(--transition);
+            border-radius: 0 12px 12px 0;
+            margin: 5px 0;
+        }
+
+        body.dark-mode .menu-item {
+            color: #CBD5E1;
+        }
+
+        .menu-item:hover {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), transparent);
+            color: var(--primary-green);
+            padding-left: 25px;
+            transform: translateX(5px);
+        }
+
+        .menu-item.active {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), transparent);
+            color: var(--primary-green);
+            border-right: 3px solid var(--primary-green);
+        }
+
+        .menu-item i {
+            margin-right: 12px;
+            font-size: 18px;
+            width: 24px;
+            text-align: center;
+        }
+
+        .sidebar-profile {
+            padding: 20px;
+            border-top: 1px solid var(--light-grey);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        body.dark-mode .sidebar-profile {
+            border-top: 1px solid #334155;
+        }
+
+        .sidebar-profile:hover {
+            background: rgba(16, 185, 129, 0.05);
+        }
+
+        .sidebar-profile-img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--primary-green);
+        }
+
+        .sidebar-profile-info {
+            flex: 1;
+        }
+
+        .sidebar-profile-name {
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--text-color);
+        }
+
+        body.dark-mode .sidebar-profile-name {
+            color: #E2E8F0;
+        }
+
+        .sidebar-profile-role {
+            font-size: 12px;
+            color: var(--text-light);
+        }*/
+
+        /* Mobile Overlay */
+        .mobile-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+            z-index: 150;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+
+        .mobile-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            padding: 30px 20px 100px;
+            max-width: 800px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .page-title {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--dark-green);
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        body.dark-mode .page-title {
+            color: var(--secondary-green);
+        }
+
+        .page-subtitle {
+            text-align: center;
+            color: var(--text-light);
+            margin-bottom: 40px;
+        }
+
+        /* Game Card */
+        .game-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: var(--shadow-lg);
+            border: 2px solid var(--primary-green);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        body.dark-mode .game-card {
+            background: var(--card-dark);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+        }
+
+        .game-info {
+            margin-bottom: 30px;
+        }
+
+        .prize-amount {
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--primary-green);
+            margin: 20px 0;
+        }
+
+        .attempts-left {
+            font-size: 18px;
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+
+        .play-button {
+            background: linear-gradient(135deg, var(--primary-green), var(--dark-green));
+            color: white;
+            border: none;
+            padding: 18px 50px;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+        }
+
+        .play-button:hover:not(:disabled) {
+            background: linear-gradient(135deg, var(--dark-green), #065F46);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(16, 185, 129, 0.6);
+        }
+
+        .play-button:disabled {
+            background: var(--light-grey);
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        /* Game Status */
+        .game-status {
+            background: var(--light-bg);
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        body.dark-mode .game-status {
+            background: #1E293B;
+        }
+
+        /* Lucky Box Styles */
+        .game-box {
+            background: linear-gradient(135deg, var(--primary-green), var(--dark-green));
+            height: 100px;
+            border-radius: 15px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            color: white;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, background 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .game-box:hover {
+            transform: translateY(-5px) scale(1.05);
+        }
+
+        .game-box.opened {
+            background: var(--light-bg);
+            color: var(--text-color);
+        }
+
+        .game-box.win {
+            background: var(--success);
+            color: white;
+            animation: pulse 0.5s ease-in-out;
+        }
+
+        .game-box.lose {
+            background: var(--error-red);
+            color: white;
+            opacity: 0.7;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        body.dark-mode .game-box.opened {
+            background: #334155;
+            color: #E2E8F0;
+        }
+
+        .status-inactive {
+            color: var(--error-red);
+        }
+
+        .status-active {
+            color: var(--success);
+        }
+
+        /* Toast */
+        .toast-container {
+            position: fixed;
+            top: 90px;
+            right: 20px;
+            z-index: 9999;
+            max-width: 400px;
+        }
+
+        .toast {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: var(--shadow-lg);
+            border-left: 4px solid var(--primary-green);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 10px;
+            transform: translateX(400px);
+            opacity: 0;
+            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        body.dark-mode .toast {
+            background: var(--card-dark);
+        }
+
+        .toast.show {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        .toast.success {
+            border-left-color: var(--success);
+        }
+
+        .toast.error {
+            border-left-color: var(--error-red);
+        }
+
+        .toast-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            color: white;
+        }
+
+        .toast.success .toast-icon {
+            background: var(--success);
+        }
+
+        .toast.error .toast-icon {
+            background: var(--error-red);
+        }
+
+        .toast-content {
+            flex: 1;
+        }
+
+        .toast-title {
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .toast-message {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+    /* ================================================= */
+        /* 6. Bottom Navigation */
+        /* ================================================= */
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 -5px 25px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-around;
+            padding: 15px 0;
+            z-index: 90;
+            border-top: 2px solid var(--primary-green);
+        }
+
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: var(--text-light);
+            transition: var(--transition);
+            position: relative;
+            padding: 8px 12px;
+            border-radius: 15px;
+            min-width: 70px;
+        }
+
+        .nav-item.active {
+            color: var(--primary-green);
+            background: rgba(16, 185, 129, 0.1);
+            transform: translateY(-5px);
+        }
+
+        .nav-item:hover {
+            color: var(--primary-green);
+            transform: translateY(-3px);
+        }
+
+        .nav-icon {
+            font-size: 20px;
+            margin-bottom: 4px;
+            transition: var(--transition);
+        }
+
+        .nav-item:hover .nav-icon {
+            transform: scale(1.2);
+        }
+
+        .nav-label {
+            font-size: 12px;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+    
+        /* Footer */
+        .footer {
+            background: var(--white);
+            border-top: 1px solid rgba(16, 185, 129, 0.1);
+            padding: 20px;
+            text-align: center;
+            color: var(--text-light);
+            font-size: 14px;
+        }
+
+        body.dark-mode .footer {
+            background: var(--card-dark);
+            border-top: 1px solid rgba(16, 185, 129, 0.2);
+            color: #94A3B8;
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                padding: 20px 15px 100px;
+            }
+
+            .game-card {
+                padding: 30px 20px;
+            }
+
+            .prize-amount {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+<body id="body">
+    <!-- Toast Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+        <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <img src="logo.jpg" alt="logo">
+                <span style="color: white;">Elite Vision</span>
+            </div>
+            <button class="close-sidebar" id="closeSidebar">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="sidebar-menu">
+            <a href="index.html" class="menu-item">
+                <i class="fas fa-tachometer-alt"></i>
+                <span>Dashboard</span>
+            </a>
+            
+            <a href="daily-jobs.html" class="menu-item">
+                <i class="fas fa-briefcase"></i>
+                <span>Daily Job</span>
+            </a>
+            
+            
+            <a href="daily-tasks.html" class="menu-item">
+                <i class="fas fa-tasks"></i>
+                <span>Daily Tasks</span>
+            </a>
+            
+            <a href="music.html" class="menu-item">
+                <i class="fas fa-music"></i>
+                <span>Music</span>
+            </a>
+            
+            
+            <a href="spin-win.html" class="menu-item">
+                <i class="fas fa-sync-alt"></i>
+                <span>Spin and Win</span>
+            </a>
+            
+            <a href="fruit-game.html" class="menu-item">
+    <i class="fas fa-lemon"></i>
+    <span>Fruit Game</span>
+    <span style="background: #EF4444; color: white; padding: 2px 8px; border-radius: 20px; font-size: 10px; font-weight: 700; margin-left: 10px; box-shadow: 0 2px 5px rgba(239,68,68,0.4); animation: pulse 2s infinite;">NEW</span>
+</a>
+
+            
+             <div class="menu-dropdown active">
+                <a href="#" class="menu-item dropdown-toggle">
+                    <i class="fas fa-gamepad"></i>
+                    <span>Games</span>
+                </a>
+                <div class="dropdown-menu">
+                    <a href="lucky-box-game.html" class="dropdown-item">
+                        <i class="fab fa-dice"></i>
+                        <span>Lucky Boxs</span>
+                    </a>
+                    <div class="dropdown-menu">                 
+                    <a href="spin-win.html" class="dropdown-item">
+                <i class="fas fa-sync-alt"></i>
+                <span>Spin and Win</span>
+            </a>  </div>                 
+                </div>
+            </div>
+            
+            <a href="digital-skills.html" class="menu-item">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Digital Skills</span>
+            </a>
+            
+            <div class="menu-dropdown">
+                <a href="#" class="menu-item dropdown-toggle">
+                    <i class="fas fa-store"></i>
+                    <span>Marketplace</span>
+                </a>
+                <div class="dropdown-menu">
+                    <a href="marketplace.html" class="dropdown-item">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span>Marketplace</span>
+                    </a>
+                    <a href="upload-product.html" class="dropdown-item">
+                        <i class="fas fa-upload"></i>
+                        <span>Upload Product</span>
+                    </a>
+                    <!--<a href="my-products.html" class="dropdown-item">
+                        <i class="fas fa-boxes"></i>
+                        <span>My Products</span>
+                    </a>-->
+                </div>
+            </div>
+            
+            <!--  <a href="vendors.html" class="menu-item" id="vendor">
+                <i class="fas fa-store"></i>
+                <span>Vendor Dashboard</span>
+            </a>-->
+            
+            <a href="monetization.html" class="menu-item">
+                <i class="fas fa-money-bill-wave"></i>
+                <span>Monetization</span>
+            </a>
+                                                
+            <a href="withdraw.html" class="menu-item">
+                <i class="fas fa-wallet"></i>
+                <span>Withdraw</span>
+            </a>
+            
+            <a href="referrals.html" class="menu-item">
+                <i class="fas fa-users"></i>
+                <span>My Referrals</span>
+                <span style="background: #EF4444; color: white; padding: 2px 8px; border-radius: 20px; font-size: 10px; font-weight: 700; margin-left: 10px; box-shadow: 0 2px 5px rgba(239,68,68,0.4); animation: pulse 2s infinite;">NEW</span>
+                
+            </a>
+            <a href="bank-setting.html" class="menu-item">
+                <i class="fas fa-university"></i>
+                <span>Bank Setting</span>
+            </a>
+            
+            <a href="profile.html" class="menu-item">
+                <i class="fas fa-user"></i>
+                <span>Profile</span>
+            </a>
+            
+        </div>
+        
+            <div class="sidebar-profile">
+            <img src="avatar.png" alt="Profile" class="sidebar-profile-img" id="sidebarProfileImg">
+            <div class="sidebar-profile-info">
+                <div class="sidebar-profile-name" id="sidebarProfileName">Loading...</div>
+                <div class="sidebar-profile-role" id="sidebarProfileRole">Loading...</div>
+            </div>
+            <button class="sidebar-profile-settings">
+                <a href="profile.html" ><i class="fas fa-cog" style="color: white;"></i></a>
+            </button>
+        </div>
+    </div>
+
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+        
+    <!-- Header -->
+    <header class="header">
+        <div style="display: flex; align-items: center; gap: 15px;">
+            
+            <a href="dashboard.html" class="logo">
+                <div class="logo">
+                    <img src="logo.jpg" alt="Logo">                   
+                </div>
+                <span>Elite Vision</span>
+            </a>
+        </div>
+        
+        <div class="nav-right">
+            <button class="theme-toggle" id="darkModeToggle">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <h1 class="page-title">🎮 Daily Game Challenge</h1>
+        <p class="page-subtitle">Win amazing rewards daily!</p>
+
+        <div class="game-card">
+            <div class="game-info">
+                <h2>Today's Prize</h2>
+                <div class="prize-amount" id="prizeAmount">₦0</div>
+                <p class="attempts-left" id="attemptsLeft">Attempts left: 0</p>
+            </div>
+
+            <button class="play-button" id="playButton" style="display: inline-flex;">
+                <i class="fas fa-play"></i> Play Now
+            </button>
+
+            <div class="game-status" id="gameStatus">
+                <p><strong>Status:</strong> <span id="statusText">Loading...</span></p>
+            </div>
+
+            <!-- Lucky Box Game Section -->
+            <div style="margin-top: 30px;">
+                <div style="text-align: center; margin-bottom: 20px;">
+                    <h3 style="color: var(--gold); margin-bottom: 10px;">Target Number:</h3>
+                    <div style="font-size: 64px; font-weight: 800; color: var(--gold); text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);" id="targetNumber">?</div>
+                </div>
+
+                <div id="boxesContainer" style="display: none; grid-template-columns: repeat(3, 1fr); gap: 15px; margin: 20px 0;"></div>
+
+                <div id="gameResult"></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item">
+            <i class="fas fa-tachometer-alt nav-icon"></i>
+            <span class="nav-label">Dashboard</span>
+        </a>
+        <a href="marketplace.html" class="nav-item">
+            <i class="fas fa-store nav-icon"></i>
+            <span class="nav-label">Marketplace</span>
+        </a>
+        <a href="withdraw.html" class="nav-item">
+            <i class="fas fa-wallet nav-icon"></i>
+            <span class="nav-label">Withdraw</span>
+        </a>
+        <a href="lucky-box-game.html" class="nav-item active">
+            <i class="fas fa-gamepad nav-icon"></i>
+            <span class="nav-label">Games</span>
+        </a>
+        <a href="profile.html" class="nav-item">
+            <i class="fas fa-user nav-icon"></i>
+            <span class="nav-label">Profile</span>
+        </a>
+    </nav>
+    <!-- Footer -->
+    <footer class="footer">
+        &copy; 2026 Elite Vision Network. All rights reserved.
+    </footer>
+
+    <script src="lucky-box-game.js"></script>
+</body>
+</html>

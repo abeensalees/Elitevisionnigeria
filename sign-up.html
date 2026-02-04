@@ -1,0 +1,1296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Elite Vision</title>
+    <link rel="stylesheet" href="logo.css">    
+    <meta name="description" content="Create your Elite Vision account and start earning money online in Nigeria without referrals. Simple registration, instant access, legit platform.">
+    <meta name="keywords" content="Elite Vision sign up, register Elite Vision, earn money online Nigeria">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="icon" type="image/png" href="logo.jpg">
+   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <link rel="canonical" href="https://elitevisionsmarthub.com/sign-up.html">
+      <!-- Ads zones--
+  <meta name="34f0468adc675355fcb44a4d553ad0b931d947e1" content="34f0468adc675355fcb44a4d553ad0b931d947e1" />
+
+     <!-- Notification zone--
+  <script>
+(function(nqs){
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = nqs || {};
+s.src = "\/\/remorseful-cancel.com\/baX.VnsUdYGvl\/0hYmWYcP\/Pe\/mY9tuoZdUYltkDPsTPYN3jM_zRYXziM\/j\/Y\/tONSj_c\/zWN-jeMtykNNwB";
+s.async = true;
+s.referrerPolicy = 'no-referrer-when-downgrade';
+l.parentNode.insertBefore(s, l);
+})({})
+</script>
+  <!-- Multi banner --
+  <script>
+(function(iwaoj){
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = iwaoj || {};
+s.src = "\/\/remorseful-cancel.com\/bYXMV.sKdTGilW0iYSW_cU\/BeSm\/9\/uTZvUjlVkSPlTmYP3SMezRYYzpM\/z\/AetzN\/jPc\/zmNxjmMkzMMtQe";
+s.async = true;
+s.referrerPolicy = 'no-referrer-when-downgrade';
+l.parentNode.insertBefore(s, l);
+})({})
+</script>-->
+     <!-- New ads is here-->
+   <script src="https://momrollback.com/6b/cb/a2/6bcba2de7329e46bc42e89b77edcb96e.js"></script>
+ <script>
+  atOptions = {
+    'key' : 'c027e155f37d2153a99f3519eef05131',
+    'format' : 'iframe',
+    'height' : 60,
+    'width' : 468,
+    'params' : {}
+  };
+</script>
+<script src="https://momrollback.com/c027e155f37d2153a99f3519eef05131/invoke.js"></script>
+
+    <style>
+        /* ================================================= */
+        /* 1. Global Styles & Variables */
+        /* ================================================= */
+        :root {
+            --primary-green: #10B981; 
+            --secondary-green: #34D399; 
+            --dark-green: #047857;
+            --white: #FFFFFF;
+            --light-bg: #F8FAFC;
+            --light-grey: #E2E8F0;
+            --dark-bg: #0F172A; 
+            --card-dark: #1E293B;
+            --text-color: #334155;
+            --text-light: #64748B;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --error-red: #EF4444;
+            --warning: #F59E0B;
+            --success: #10B981;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 50%, #bbf7d0 100%);
+            color: var(--text-color); 
+            transition: var(--transition);
+            line-height: 1.6;
+            overflow-x: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* ================================================= */
+        /* 2. Header Styles */
+        /* ================================================= */
+        .header {
+            background: var(--white);
+            box-shadow: var(--shadow);
+            padding: 0 20px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 2px solid #34D399; 
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--primary-green);
+            text-decoration: none;
+        }
+
+        .logo-image {
+            width: 36px;
+            height: 36px;
+            margin-right: 12px;
+            border-radius: 8px;
+            background-color: var(--primary-green);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .menu-toggle {
+            background: none;
+            border: none;
+            font-size: 20px;
+            color: var(--text-color);
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .menu-toggle:hover {
+            background: var(--light-grey);
+            color: var(--primary-green);
+        }
+
+        .theme-toggle {
+            background: none;
+            border: none;
+            font-size: 20px;
+            color: var(--text-color);
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .theme-toggle:hover {
+            background: var(--light-grey);
+            color: var(--primary-green);
+        }
+
+        /* ================================================= */
+        /* 3. Sidebar Styles */
+        /* ================================================= */
+        .sidebar {
+            width: 280px;
+            background: var(--white);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: fixed;
+            height: 100vh;
+            z-index: 200;
+            overflow-y: auto;
+            transform: translateX(-100%);
+            left: 0;
+            top: 0;
+            border-right: 3px solid #34D399;
+        }
+
+        .sidebar.open {
+            transform: translateX(0);
+        }
+
+        .sidebar-header {
+            padding: 24px 20px;
+            border-bottom: 1px solid var(--light-grey);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .close-sidebar {
+            background: none;
+            border: none;
+            font-size: 20px;
+            color: var(--text-light);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .close-sidebar:hover {
+            color: var(--primary-green);
+        }
+
+        .sidebar-menu {
+            padding: 20px 0;
+        }
+
+        .menu-item {
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            color: var(--text-color);
+            text-decoration: none;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .menu-item:hover {
+            background-color: rgba(16, 185, 129, 0.05);
+            color: var(--primary-green);
+            padding-left: 25px;
+        }
+
+        .menu-item i {
+            margin-right: 12px;
+            font-size: 18px;
+            width: 24px;
+            text-align: center;
+        }
+
+        .menu-dropdown {
+            position: relative;
+        }
+
+        .dropdown-toggle {
+            width: 55%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .dropdown-toggle::after {
+            content: '\f107';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            transition: var(--transition);
+        }
+
+        .menu-dropdown.active .dropdown-toggle::after {
+            transform: rotate(180deg);
+        }
+
+        .dropdown-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            background: rgba(16, 185, 129, 0.03);
+        }
+
+        .menu-dropdown.active .dropdown-menu {
+            max-height: 500px;
+        }
+
+        .dropdown-item {
+            padding: 10px 20px 10px 56px;
+            display: flex;
+            align-items: center;
+            color: var(--text-color);
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 14px;
+        }
+
+        .dropdown-item:hover {
+            background-color: rgba(16, 185, 129, 0.05);
+            color: var(--primary-green);
+        }
+
+        .dropdown-item i {
+            font-size: 14px;
+            margin-right: 10px;
+        }
+
+        .sidebar-auth {
+            padding: 20px;
+            border-top: 1px solid var(--light-grey);
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .sidebar-btn {
+            padding: 12px 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            text-align: center;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .sidebar-btn-primary {
+            background: var(--primary-green);
+            color: white;
+        }
+
+        .sidebar-btn-primary:hover {
+            background: var(--dark-green);
+        }
+
+        .sidebar-btn-outline {
+            background: transparent;
+            border: 1px solid var(--light-grey);
+            color: var(--text-color);
+        }
+
+        .sidebar-btn-outline:hover {
+            background: var(--light-grey);
+        }
+
+        /* ================================================= */
+        /* 4. Main Content Area */
+        /* ================================================= */
+        .main-content {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        .signup-container {
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .signup-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: var(--shadow-lg);
+            transition: var(--transition);
+            animation: fadeInUp 0.6s ease-out;
+            border-top: 5px solid #34D399; 
+            border-bottom: 5px solid #34D399; 
+            }
+
+        .signup-card:hover {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .signup-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .signup-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary-green);
+            margin-bottom: 8px;
+        }
+
+        .signup-subtitle {
+            color: var(--text-light);
+            font-size: 16px;
+        }
+
+        /* ================================================= */
+        /* 5. Form Styles with Icons and Animated Labels */
+        /* ================================================= */
+        .form-group {
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .form-label {
+            position: absolute;
+            left: 50px;
+            top: 16px;
+            color: var(--text-light);
+            font-size: 15px;
+            pointer-events: none;
+            transition: var(--transition);
+            background: var(--white);
+            padding: 0 4px;
+            font-weight: 500;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 14px 16px 14px 50px;
+            border: 1px solid var(--light-grey);
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            transition: var(--transition);
+            font-size: 15px;
+            background: var(--white);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-green);
+            box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+        }
+
+        .form-control:focus + .form-label,
+        .form-control:not(:placeholder-shown) + .form-label {
+            top: -8px;
+            left: 46px;
+            font-size: 13px;
+            color: var(--primary-green);
+            font-weight: 600;
+        }
+
+        .form-icon {
+            position: absolute;
+            left: 16px;
+            top: 16px;
+            color: var(--text-light);
+            font-size: 18px;
+            transition: var(--transition);
+        }
+
+        .form-control:focus ~ .form-icon {
+            color: var(--primary-green);
+        }
+
+        .form-control.error {
+            border-color: var(--error-red);
+        }
+
+        .form-control.success {
+            border-color: var(--success);
+        }
+
+        .password-toggle {
+            position: absolute;
+            right: 16px;
+            top: 16px;
+            background: none;
+            border: none;
+            color: var(--text-light);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .password-toggle:hover {
+            color: var(--primary-green);
+        }
+
+        .form-row {
+            display: flex;
+            gap: 16px;
+        }
+
+        .form-row .form-group {
+            flex: 1;
+        }
+
+        .form-select {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2364748B'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3Cpath%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 16px center;
+            background-size: 16px;
+            padding-right: 40px;
+        }
+
+        .form-hint {
+            font-size: 12px;
+            color: var(--text-light);
+            margin-top: 6px;
+            margin-left: 50px;
+        }
+
+        .form-error {
+            font-size: 12px;
+            color: var(--error-red);
+            margin-top: 6px;
+            margin-left: 50px;
+            display: none;
+            animation: shake 0.5s ease-in-out;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            75% { transform: translateX(5px); }
+        }
+
+        .form-error.show {
+            display: block;
+        }
+
+        .buy-code-link {
+            text-align: center;
+            margin-top: -10px;
+            margin-bottom: 20px;
+        }
+
+        .buy-code-link a {
+            color: var(--primary-green);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            transition: var(--transition);
+        }
+
+        .buy-code-link a:hover {
+            text-decoration: underline;
+        }
+
+        /* ================================================= */
+        /* 6. Button Styles */
+        /* ================================================= */
+        .btn {
+            padding: 14px 24px;
+            border: none;
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        .btn-primary {
+            background: var(--primary-green);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--dark-green);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(16, 185, 129, 0.3);
+        }
+
+        .btn-primary:active {
+            transform: translateY(0);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 1px solid var(--light-grey);
+            color: var(--text-color);
+        }
+
+        .btn-secondary:hover {
+            background: var(--light-grey);
+        }
+
+        /* ================================================= */
+        /* 7. Footer Styles with Icons */
+        /* ================================================= */
+        .footer {
+            background: var(--white);
+            padding: 40px 20px 20px;
+            border-top: 1px solid var(--light-grey);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-section h3 {
+            font-size: 18px;
+            margin-bottom: 16px;
+            color: var(--primary-green);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer-section h3 i {
+            font-size: 20px;
+        }
+
+        .footer-section p {
+            color: var(--text-light);
+            margin-bottom: 16px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 14px;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-green);
+            padding-left: 5px;
+        }
+
+        .footer-links i {
+            width: 16px;
+            text-align: center;
+        }
+
+        .contact-info {
+            list-style: none;
+        }
+
+        .contact-info li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text-light);
+            font-size: 14px;
+        }
+
+        .contact-info i {
+            width: 16px;
+            color: var(--primary-green);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 12px;
+            margin-top: 16px;
+        }
+
+        .social-link {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: var(--light-grey);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-color);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background: var(--primary-green);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            margin-top: 30px;
+            border-top: 1px solid var(--light-grey);
+            color: var(--text-light);
+            font-size: 14px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .footer-bottom-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer-bottom-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 13px;
+            transition: var(--transition);
+        }
+
+        .footer-bottom-links a:hover {
+            color: var(--primary-green);
+        }
+
+        /* ================================================= */
+        /* 8. Login Prompt */
+        /* ================================================= */
+        .login-prompt {
+            text-align: center;
+            margin-top: 24px;
+            padding-top: 24px;
+            border-top: 1px solid var(--light-grey);
+        }
+
+        .login-prompt a {
+            color: var(--primary-green);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .login-prompt a:hover {
+            text-decoration: underline;
+        }
+
+        /* ================================================= */
+        /* 9. Dark Mode Styles */
+        /* ================================================= */
+        .dark-mode {
+            background: var(--dark-bg);
+            color: #E2E8F0;
+        }
+
+        .dark-mode .header,
+        .dark-mode .signup-card,
+        .dark-mode .footer,
+        .dark-mode .sidebar {
+            background: var(--card-dark);
+            color: #E2E8F0;
+        }
+
+        .dark-mode .form-control {
+            background: #334155;
+            border-color: #475569;
+            color: #E2E8F0;
+        }
+
+        .dark-mode .form-control:focus {
+            border-color: var(--primary-green);
+        }
+
+        .dark-mode .form-label {
+            background: var(--card-dark);
+        }
+
+        .dark-mode .menu-item {
+            color: #CBD5E1;
+        }
+
+        .dark-mode .menu-item:hover {
+            background: rgba(16, 185, 129, 0.1);
+            color: var(--secondary-green);
+        }
+
+        .dark-mode .btn-secondary {
+            border-color: #475569;
+            color: #CBD5E1;
+        }
+
+        .dark-mode .btn-secondary:hover {
+            background: #334155;
+        }
+
+        .dark-mode .login-prompt {
+            border-top-color: #334155;
+        }
+
+        .dark-mode .footer-section p,
+        .dark-mode .footer-links a,
+        .dark-mode .contact-info li {
+            color: #94A3B8;
+        }
+
+        .dark-mode .footer-links a:hover {
+            color: var(--secondary-green);
+        }
+
+        .dark-mode .social-link {
+            background: #334155;
+            color: #94A3B8;
+        }
+
+        .dark-mode .social-link:hover {
+            background: var(--primary-green);
+            color: white;
+        }
+
+        /* ================================================= */
+        /* 10. Success Modal */
+        /* ================================================= */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+
+        .modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-content {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 30px;
+            width: 90%;
+            max-width: 400px;
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-20px) scale(0.9);
+            transition: var(--transition);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .modal.active .modal-content {
+            transform: translateY(0) scale(1);
+            animation: modalPop 0.5s ease-out;
+        }
+
+        @keyframes modalPop {
+            0% {
+                transform: translateY(-20px) scale(0.9);
+                opacity: 0;
+            }
+            70% {
+                transform: translateY(10px) scale(1.02);
+            }
+            100% {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
+        }
+
+        .modal-icon {
+            font-size: 60px;
+            color: var(--success);
+            margin-bottom: 20px;
+            animation: bounce 1s ease-in-out;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+        .modal-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-green);
+            margin-bottom: 10px;
+        }
+
+        .modal-message {
+            color: var(--text-light);
+            margin-bottom: 25px;
+        }
+
+        .modal-actions {
+            display: flex;
+            gap: 12px;
+        }
+
+        .modal-actions .btn {
+            flex: 1;
+        }
+
+        /* ================================================= */
+        /* 11. Responsive Styles */
+        /* ================================================= */
+        @media (max-width: 640px) {
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+            
+            .signup-card {
+                padding: 24px;
+            }
+            
+            .header {
+                padding: 0 16px;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .modal-actions {
+                flex-direction: column;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .footer-bottom-links {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .signup-title {
+                font-size: 24px;
+            }
+            
+            .main-content {
+                padding: 20px 16px;
+            }
+            
+            .form-label {
+                font-size: 14px;
+            }
+            
+            .form-control:focus + .form-label,
+            .form-control:not(:placeholder-shown) + .form-label {
+                font-size: 12px;
+            }
+        }
+
+        /* ================================================= */
+        /* 12. Mobile Overlay */
+        /* ================================================= */
+        .mobile-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 150;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+
+        .mobile-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+    </style>
+</head>
+<body id="body">
+    <!-- Header -->
+    <header class="header">
+        <a href="index.html" class="logo">
+            <img src="logo.jpg" alt="logo">
+              <span>Elite Vision</span>
+        </a>
+        
+        <div class="nav-right">
+            <button class="theme-toggle" id="darkModeToggle">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+               <img src="logo.jpg" alt="logo">
+               <span>Elite Vision</span>
+            </div>
+            <button class="close-sidebar" id="closeSidebar">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="sidebar-menu">
+            <a href="index.html" class="menu-item">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            
+            <a href="how-it-works.html" class="menu-item">
+                <i class="fas fa-cogs"></i>
+                <span>How It Works</span>
+            </a>
+            
+            <a href="about.html" class="menu-item">
+                <i class="fas fa-info-circle"></i>
+                <span>About Us</span>
+            </a>
+            
+            <a href="features.html" class="menu-item">
+                <i class="fas fa-star"></i>
+                <span>Features</span>
+            </a>
+            
+            <a href="top-earners.html" class="menu-item">
+                <i class="fas fa-trophy"></i>
+                <span>Top Earners</span>
+            </a>
+            
+            <div class="menu-dropdown">
+                <a href="#" class="menu-item dropdown-toggle">
+                    <i class="fas fa-key"></i>
+                    <span>Code</span>
+                </a>
+                <div class="dropdown-menu">
+                    <a href="vendors.html" class="dropdown-item">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Buy Coupon Code</span>
+                    </a>
+                    <a href="validation.html" class="dropdown-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Validation</span>
+                    </a>
+                </div>
+            </div>
+            
+            <a href="privacy.html" class="menu-item">
+                <i class="fas fa-shield-alt"></i>
+                <span>Privacy Policy</span>
+            </a>
+        </div>
+        
+        <div class="sidebar-auth">
+            <a href="sign-in.html" class="sidebar-btn sidebar-btn-outline">
+                <i class="fas fa-sign-in-alt"></i> Sign In
+            </a>
+            <a href="sign-up.html" class="sidebar-btn sidebar-btn-primary">
+                <i class="fas fa-user-plus"></i> Sign Up
+            </a>
+        </div>
+    </div>
+
+    <!-- Mobile Overlay -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="signup-container">
+            <div class="signup-card">               
+               <div class="signup-header">
+                    <h1 class="signup-title">Let's Get Started</h1>
+                    <p class="signup-subtitle">Join Elite Vision Network today</p>
+                </div>
+                
+                <form id="signupForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <i class="fas fa-user form-icon"></i>
+                            <input type="text" id="fullName" class="form-control" placeholder=" " required>
+                            <label class="form-label" for="fullName">Full Name</label>
+                            <div class="form-error" id="fullNameError">Please enter your full name</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <i class="fas fa-at form-icon"></i>
+                            <input type="text" id="username" class="form-control" placeholder=" " required>
+                            <label class="form-label" for="username">Username</label>
+                            <div class="form-error" id="usernameError">Username is required</div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <i class="fas fa-envelope form-icon"></i>
+                        <input type="email" id="email" class="form-control" placeholder=" " required>
+                        <label class="form-label" for="email">Email Address</label>
+                        <div class="form-error" id="emailError">Please enter a valid email address</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <i class="fas fa-phone form-icon"></i>
+                        <input type="tel" id="phone" class="form-control" placeholder=" " required>
+                        <label class="form-label" for="phone">Phone Number</label>
+                        <div class="form-error" id="phoneError">Please enter a valid phone number</div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <i class="fas fa-globe form-icon"></i>
+                            <select id="country" class="form-control form-select"  required>
+                                <option value="" selected disabled>Select your Country</option>
+                                <option value="Nigeria">Nigeria</option>
+                                <option value="Cameron">Cameron</option>
+                                <option value="Ghana">Ghana</option>
+                                <option value="Kenya">Kenya</option>                                
+                                <option value="South-Africa">South Africa</option>
+                                <option value="Other">Other</option>                                
+                                 </select>
+                            <label class="form-label" for="country">Country</label>
+                            <div class="form-error" id="countryError">Please select your country</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <i class="fas fa-user-friends form-icon"></i>
+                            <input type="text" id="referredBy" class="form-control" placeholder=" ">
+                            <label class="form-label" for="referredBy">Referred By (Optional)</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <i class="fas fa-gem form-icon"></i>
+                            <select id="accountType" class="form-control form-select"  required>
+                                <option value="" selected disabled>Account type</option>
+                                <option value="Diamond">💎 Diamond Account</option>
+                                <option value="Gold">🏆 Gold Account</option>
+                          </select>
+                            <label class="form-label" for="accountType">Account Type</label>
+                            <div class="form-error" id="accountTypeError">Please select account type</div>
+                        </div>
+                        
+                    <div class="form-row">
+                         <div class="form-group">
+                            <i class="fas fa-key form-icon"></i>
+                            <input type="text" id="couponCode" class="form-control" placeholder=" ">
+                            <label class="form-label" for="couponCode">Coupon Code</label>
+                        </div>
+                    </div>
+                    
+                    <div class="buy-code-link">
+                        <a href="vendors.html"><i class="fas fa-shopping-cart"></i> Don't have a code? Buy now</a>
+                    </div>
+                    
+                    <div class="form-group">
+                        <i class="fas fa-lock form-icon"></i>
+                        <input type="password" id="password" class="form-control" placeholder=" " required>
+                        <label class="form-label" for="password">Password</label>
+                        <button type="button" class="password-toggle" id="togglePassword">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        <div class="form-hint">Use 8+ characters with a mix of letters, numbers & symbols</div>
+                        <div class="form-error" id="passwordError">Password must be at least 8 characters</div>
+                    </div>
+                                        
+                    
+                    <div class="form-group" style="margin-top: 30px;">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-user-plus"></i> Create Account
+                        </button>
+                    </div>
+                </form>
+                
+                <div class="login-prompt">
+                    Already have an account? <a href="sign-in.html">Sign in here</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="logo">
+            <img src="logo.jpg" alt="logo">
+              <span>Elite Vision</span>
+        </div>
+         <p>Join our network and start your journey to financial freedom with our proven system and supportive community. Elite Vision provides cutting-edge solutions for vendors and affiliates.</p>
+                <div class="social-links">
+                    <a href="https://whatsapp.com/channel/0029Vb7B1ay3bbV5Ny8mM21v" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://t.me/+olDhklWDFN45YzY0" class="social-link"><i class="fab fa-telegram"></i></a>
+                    <a href="https://tiktok.com/@elitevisionnet" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3><i class="fas fa-link"></i> Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="how-it-works.html"><i class="fas fa-cogs"></i> How It Works</a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                    <li><a href="features.html"><i class="fas fa-star"></i> Features</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3><i class="fas fa-key"></i> Resources</h3>
+                <ul class="footer-links">
+                    <li><a href="vendors.html"><i class="fas fa-shopping-cart"></i> Buy Coupon Code</a></li>
+                    <li><a href="validation.html"><i class="fas fa-check-circle"></i> Code Validation</a></li>
+                    <li><a href="top-earners.html"><i class="fas fa-trophy"></i> Top Earners</a></li>
+                    <li><a href="privacy.html"><i class="fas fa-shield-alt"></i> Privacy Policy</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3><i class="fas fa-envelope"></i> Contact Us</h3>
+                <ul class="contact-info">
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Business Ave, Suite 100</li>
+                    <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                    <li><i class="fas fa-envelope"></i> elitevisionnetwork85@gmail.com</li>
+                    </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="footer-bottom-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="cookies.html">Cookie Policy</a>
+            </div>
+            <div>&copy; 2026 Elite Vision Network. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <div class="modal-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2 class="modal-title">Registration Successful!</h2>
+            <p class="modal-message">Your account has been created successfully. Welcome to Elite Vision Network!</p>
+            <div class="modal-actions">
+                <button class="btn btn-primary" id="goToDashboard">Go to Dashboard</button>
+                <button class="btn btn-secondary" id="closeSuccessModal">Close</button>
+            </div>
+        </div>
+    </div>
+
+        <div class="modal" id="errorModal">
+        <div class="modal-content">
+            <div class="modal-icon" style="color: var(--error-red);">
+                <i class="fas fa-times-circle"></i>
+            </div>
+            <h2 class="modal-title" style="color: var(--error-red);">Registration Failed!</h2>
+            <p class="modal-message" id="errorMessageContent">An error occurred during registration. Please check your details and try again.</p>
+            <div class="modal-actions">
+                <button class="btn btn-primary" style="background: var(--error-red);" id="closeErrorModal">Close</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal" id="successModal">
+        </div>
+
+    <script src="sign-up.js"></script>
+</body>
+</html>

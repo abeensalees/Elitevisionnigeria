@@ -1,0 +1,1084 @@
+
+        /* ================================================= */
+        /* 1. Global Styles & Variables */
+        /* ================================================= */
+        :root {
+            --primary-green: #10B981; 
+            --secondary-green: #34D399; 
+            --dark-green: #047857;
+            --white: #FFFFFF;
+            --light-bg: #F8FAFC;
+            --light-grey: #E2E8F0;
+            --dark-bg: #0F172A; 
+            --card-dark: #1E293B;
+            --text-color: #334155;
+            --text-light: #64748B;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --error-red: #EF4444;
+            --warning: #F59E0B;
+            --success: #10B981;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 50%, #bbf7d0 100%);
+          
+           /* background-color: var(--light-bg); */
+            color: var(--text-color); 
+            transition: var(--transition);
+            line-height: 1.6;
+            overflow-x: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* ================================================= */
+        /* 2. Header Styles */
+        /* ================================================= */
+        .header {
+            background: var(--white);
+            box-shadow: var(--shadow);
+            padding: 0 20px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 2px solid #10B981;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 25px;
+            font-weight: 700;
+            color: var(--primary-green);
+            text-decoration: none;
+        }
+
+        .logo-image {
+            width: 36px;
+            height: 36px;
+            margin-right: 12px;
+            border-radius: 8px;
+            background-color: var(--primary-green);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .menu-toggle {
+            background: none;
+            border: none;
+            font-size: 20px;
+            color: var(--text-color);
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .menu-toggle:hover {
+            background: var(--light-grey);
+            color: var(--primary-green);
+        }
+
+        .theme-toggle {
+            background: none;
+            border: none;
+            font-size: 20px;
+            color: var(--text-color);
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .theme-toggle:hover {
+            background: var(--light-grey);
+            color: var(--primary-green);
+        }
+
+        /* ================================================= */
+        /* 3. Sidebar Styles */
+        /* ================================================= */
+        .sidebar {
+            width: 280px;
+            background: var(--white);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: fixed;
+            height: 100vh;
+            z-index: 200;
+            overflow-y: auto;
+            transform: translateX(-100%);
+            left: 0;
+            top: 0;
+        }
+
+        .sidebar.open {
+            transform: translateX(0);
+        }
+
+        .sidebar-header {
+            padding: 24px 20px;
+            border-bottom: 1px solid var(--light-grey);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .close-sidebar {
+            background: none;
+            border: none;
+            font-size: 20px;
+            color: var(--text-light);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .close-sidebar:hover {
+            color: var(--primary-green);
+        }
+
+        .sidebar-menu {
+            padding: 20px 0;
+        }
+
+        .menu-item {
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            color: var(--text-color);
+            text-decoration: none;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .menu-item:hover {
+            background-color: rgba(16, 185, 129, 0.05);
+            color: var(--primary-green);
+            padding-left: 25px;
+        }
+
+        .menu-item i {
+            margin-right: 12px;
+            font-size: 18px;
+            width: 24px;
+            text-align: center;
+        }
+
+        .menu-dropdown {
+            position: relative;
+        }
+
+        .dropdown-toggle {
+            width: 55%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .dropdown-toggle::after {
+            content: '\f107';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            transition: var(--transition);
+        }
+
+        .menu-dropdown.active .dropdown-toggle::after {
+            transform: rotate(180deg);
+        }
+
+        .dropdown-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            background: rgba(16, 185, 129, 0.03);
+        }
+
+        .menu-dropdown.active .dropdown-menu {
+            max-height: 500px;
+        }
+
+        .dropdown-item {
+            padding: 10px 20px 10px 56px;
+            display: flex;
+            align-items: center;
+            color: var(--text-color);
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 14px;
+        }
+
+        .dropdown-item:hover {
+            background-color: rgba(16, 185, 129, 0.05);
+            color: var(--primary-green);
+        }
+
+        .dropdown-item i {
+            font-size: 14px;
+            margin-right: 10px;
+        }
+
+        .sidebar-auth {
+            padding: 20px;
+            border-top: 1px solid var(--light-grey);
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .sidebar-btn {
+            padding: 12px 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            text-align: center;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .sidebar-btn-primary {
+            background: var(--primary-green);
+            color: white;
+        }
+
+        .sidebar-btn-primary:hover {
+            background: var(--dark-green);
+        }
+
+        .sidebar-btn-outline {
+            background: transparent;
+            border: 1px solid var(--light-grey);
+            color: var(--text-color);
+        }
+
+        .sidebar-btn-outline:hover {
+            background: var(--light-grey);
+        }
+
+        /* ================================================= */
+        /* 4. Main Content Area */
+        /* ================================================= */
+        .main-content {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        .signin-container {
+            width: 100%;
+            max-width: 450px;
+        }
+
+        .signin-card {
+           /* background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 50%, #bbf7d0 100%);*/
+          
+            background: var(--white);
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: var(--shadow-lg);
+            transition: var(--transition);
+            animation: fadeInUp 0.6s ease-out;
+     border-top: 5px solid #10B981;
+border-bottom: 5px solid #10B981;        }
+
+        .signin-card:hover {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .signin-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .signin-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary-green);
+            margin-bottom: 8px;
+        }
+
+        .signin-subtitle {
+            color: var(--text-light);
+            font-size: 16px;
+        }
+
+        /* ================================================= */
+        /* 5. Form Styles with Icons and Animated Labels */
+        /* ================================================= */
+        .form-group {
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .form-label {
+            position: absolute;
+            left: 50px;
+            top: 16px;
+            color: var(--text-light);
+            font-size: 15px;
+            pointer-events: none;
+            transition: var(--transition);
+            background: var(--white);
+            padding: 0 4px;
+            font-weight: 500;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 14px 16px 14px 50px;
+            border: 1px solid var(--light-grey);
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            transition: var(--transition);
+            font-size: 15px;
+            background: var(--white);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-green);
+            box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+        }
+
+        .form-control:focus + .form-label,
+        .form-control:not(:placeholder-shown) + .form-label {
+            top: -8px;
+            left: 46px;
+            font-size: 13px;
+            color: var(--primary-green);
+            font-weight: 600;
+        }
+
+        .form-icon {
+            position: absolute;
+            left: 16px;
+            top: 16px;
+            color: var(--text-light);
+            font-size: 18px;
+            transition: var(--transition);
+        }
+
+        .form-control:focus ~ .form-icon {
+            color: var(--primary-green);
+        }
+
+        .form-control.error {
+            border-color: var(--error-red);
+        }
+
+        .form-control.success {
+            border-color: var(--success);
+        }
+
+        .password-toggle {
+            position: absolute;
+            right: 16px;
+            top: 16px;
+            background: none;
+            border: none;
+            color: var(--text-light);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .password-toggle:hover {
+            color: var(--primary-green);
+        }
+
+        .form-options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .remember-me {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .remember-me input {
+            width: 16px;
+            height: 16px;
+        }
+
+        .remember-me label {
+            font-size: 14px;
+            color: var(--text-light);
+            cursor: pointer;
+        }
+
+        .forgot-password {
+            color: var(--primary-green);
+            text-decoration: none;
+            font-size: 14px;
+            transition: var(--transition);
+        }
+
+        .forgot-password:hover {
+            text-decoration: underline;
+        }
+
+        .form-hint {
+            font-size: 12px;
+            color: var(--text-light);
+            margin-top: 6px;
+            margin-left: 50px;
+        }
+
+        .form-error {
+            font-size: 12px;
+            color: var(--error-red);
+            margin-top: 6px;
+            margin-left: 50px;
+            display: none;
+            animation: shake 0.5s ease-in-out;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            75% { transform: translateX(5px); }
+        }
+
+        .form-error.show {
+            display: block;
+        }
+
+        /* ================================================= */
+        /* 6. Button Styles */
+        /* ================================================= */
+        .btn {
+            padding: 14px 24px;
+            border: none;
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        .btn-primary {
+            background: var(--primary-green);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--dark-green);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(16, 185, 129, 0.3);
+        }
+
+        .btn-primary:active {
+            transform: translateY(0);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 1px solid var(--light-grey);
+            color: var(--text-color);
+        }
+
+        .btn-secondary:hover {
+            background: var(--light-grey);
+        }
+
+        /* ================================================= */
+        /* 7. Footer Styles with Icons */
+        /* ================================================= */
+        .footer {
+            background: var(--white);
+            padding: 40px 20px 20px;
+            border-top: 1px solid var(--light-grey);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-section h3 {
+            font-size: 18px;
+            margin-bottom: 16px;
+            color: var(--primary-green);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer-section h3 i {
+            font-size: 20px;
+        }
+
+        .footer-section p {
+            color: var(--text-light);
+            margin-bottom: 16px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 14px;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-green);
+            padding-left: 5px;
+        }
+
+        .footer-links i {
+            width: 16px;
+            text-align: center;
+        }
+
+        .contact-info {
+            list-style: none;
+        }
+
+        .contact-info li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text-light);
+            font-size: 14px;
+        }
+
+        .contact-info i {
+            width: 16px;
+            color: var(--primary-green);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 12px;
+            margin-top: 16px;
+        }
+
+        .social-link {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: var(--light-grey);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-color);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background: var(--primary-green);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            margin-top: 30px;
+            border-top: 1px solid var(--light-grey);
+            color: var(--text-light);
+            font-size: 14px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .footer-bottom-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer-bottom-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 13px;
+            transition: var(--transition);
+        }
+
+        .footer-bottom-links a:hover {
+            color: var(--primary-green);
+        }
+
+        /* ================================================= */
+        /* 8. Signup Prompt */
+        /* ================================================= */
+        .signup-prompt {
+            text-align: center;
+            margin-top: 24px;
+            padding-top: 24px;
+            border-top: 1px solid var(--light-grey);
+        }
+
+        .signup-prompt a {
+            color: var(--primary-green);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .signup-prompt a:hover {
+            text-decoration: underline;
+        }
+
+        /* ================================================= */
+        /* 9. Dark Mode Styles */
+        /* ================================================= */
+        .dark-mode {
+            background: var(--dark-bg);
+            color: #E2E8F0;
+        }
+
+        .dark-mode .header,
+        .dark-mode .signin-card,
+        .dark-mode .footer,
+        .dark-mode .sidebar {
+            background: var(--card-dark);
+            color: #E2E8F0;
+        }
+
+        .dark-mode .form-control {
+            background: #334155;
+            border-color: #475569;
+            color: #E2E8F0;
+        }
+
+        .dark-mode .form-control:focus {
+            border-color: var(--primary-green);
+        }
+
+        .dark-mode .form-label {
+            background: var(--card-dark);
+        }
+
+        .dark-mode .menu-item {
+            color: #CBD5E1;
+        }
+
+        .dark-mode .menu-item:hover {
+            background: rgba(16, 185, 129, 0.1);
+            color: var(--secondary-green);
+        }
+
+        .dark-mode .btn-secondary {
+            border-color: #475569;
+            color: #CBD5E1;
+        }
+
+        .dark-mode .btn-secondary:hover {
+            background: #334155;
+        }
+
+        .dark-mode .signup-prompt {
+            border-top-color: #334155;
+        }
+
+        .dark-mode .footer-section p,
+        .dark-mode .footer-links a,
+        .dark-mode .contact-info li {
+            color: #94A3B8;
+        }
+
+        .dark-mode .footer-links a:hover {
+            color: var(--secondary-green);
+        }
+
+        .dark-mode .social-link {
+            background: #334155;
+            color: #94A3B8;
+        }
+
+        .dark-mode .social-link:hover {
+            background: var(--primary-green);
+            color: white;
+        }
+
+        .dark-mode .remember-me label {
+            color: #94A3B8;
+        }
+
+        /* ================================================= */
+        /* 10. Success Modal */
+        /* ================================================= */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+
+        .modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-content {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 30px;
+            width: 90%;
+            max-width: 400px;
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-20px) scale(0.9);
+            transition: var(--transition);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .modal.active .modal-content {
+            transform: translateY(0) scale(1);
+            animation: modalPop 0.5s ease-out;
+        }
+
+        @keyframes modalPop {
+            0% {
+                transform: translateY(-20px) scale(0.9);
+                opacity: 0;
+            }
+            70% {
+                transform: translateY(10px) scale(1.02);
+            }
+            100% {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
+        }
+
+        .modal-icon {
+            font-size: 60px;
+            color: var(--success);
+            margin-bottom: 20px;
+            animation: bounce 1s ease-in-out;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+        .modal-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-green);
+            margin-bottom: 10px;
+        }
+
+        .modal-message {
+            color: var(--text-light);
+            margin-bottom: 25px;
+        }
+
+        .modal-actions {
+            display: flex;
+            gap: 12px;
+        }
+
+        .modal-actions .btn {
+            flex: 1;
+        }
+
+         /* 10. Success/Error Modal (An kara gyaran Error Modal) */
+        /* ================================================= */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+
+        .modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-content {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 30px;
+            width: 90%;
+            max-width: 400px;
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-20px) scale(0.9);
+            transition: var(--transition);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .modal.active .modal-content {
+            transform: translateY(0) scale(1);
+            animation: modalPop 0.5s ease-out;
+        }
+
+        @keyframes modalPop {
+            0% {
+                transform: translateY(-20px) scale(0.9);
+                opacity: 0;
+            }
+            70% {
+                transform: translateY(10px) scale(1.02);
+            }
+            100% {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
+        }
+
+        .modal-icon {
+            font-size: 60px;
+            margin-bottom: 20px;
+            animation: bounce 1s ease-in-out;
+        }
+
+        .modal-success .modal-icon {
+            color: var(--success);
+        }
+
+        .modal-error .modal-icon {
+            color: var(--error-red); /* Launi na Error */
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+        .modal-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .modal-success .modal-title {
+            color: var(--primary-green);
+        }
+
+        .modal-error .modal-title {
+            color: var(--error-red); /* Launi na Error */
+        }
+
+        .modal-message {
+            color: var(--text-light);
+            margin-bottom: 25px;
+        }
+
+        .modal-actions {
+            display: flex;
+            gap: 12px;
+        }
+
+        .modal-actions .btn {
+            flex: 1;
+        }
+        
+        /* Sabon Salo na Red Button na Error Modal */
+        .btn-error {
+            background: var(--error-red);
+            color: var(--white);
+        }
+        
+        .btn-error:hover {
+            background: #CC0000;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(239, 68, 68, 0.3);
+        }
+        
+        
+        /* 11. Responsive Styles */
+        @media (max-width: 640px) {
+            .signin-card {
+                padding: 24px;
+            }
+            
+            /* ... Sauran Media Queries ... */
+        }
+
+        /* Dark Mode adjustments for modal */
+        .dark-mode .modal-content {
+            background: var(--card-dark);
+        }
+
+        /* ================================================= */
+        /* 11. Responsive Styles */
+        /* ================================================= */
+        @media (max-width: 640px) {
+            .signin-card {
+                padding: 24px;
+            }
+            
+            .header {
+                padding: 0 16px;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .modal-actions {
+                flex-direction: column;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .footer-bottom-links {
+                justify-content: center;
+            }
+            
+            .form-options {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .signin-title {
+                font-size: 24px;
+            }
+            
+            .main-content {
+                padding: 20px 16px;
+            }
+            
+            .form-label {
+                font-size: 14px;
+            }
+            
+            .form-control:focus + .form-label,
+            .form-control:not(:placeholder-shown) + .form-label {
+                font-size: 12px;
+            }
+        }
+
+        /* ================================================= */
+        /* 12. Mobile Overlay */
+        /* ================================================= */
+        .mobile-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 150;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+
+        .mobile-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+

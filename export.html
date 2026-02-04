@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Vision - Secure Bulk Export</title>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <style>
+        body { font-family: sans-serif; background: #f4f4f4; padding: 20px; text-align: center; }
+        .container { background: white; padding: 30px; border-radius: 10px; max-width: 600px; margin: auto; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        input, select, button { width: 100%; padding: 12px; margin: 10px 0; border-radius: 5px; border: 1px solid #ddd; font-size: 16px; box-sizing: border-box; }
+        button { background: #007bff; color: white; border: none; cursor: pointer; font-weight: bold; }
+        button#exportBtn { background: #28a745; }
+        button:disabled { background: #ccc; }
+        #authSection { display: block; }
+        #exportSection { display: none; }
+        .status { margin-top: 20px; padding: 10px; border-radius: 5px; display: none; }
+        .success { background: #d4edda; color: #155724; }
+        .error { background: #f8d7da; color: #721c24; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Elite Vision Secure Exporter</h2>
+elitevisionnetwork85@gmail.com
+    <div id="authSection">
+        <p>Please login with Admin credentials to access data</p>
+        <input type="email" id="email" placeholder="Admin Email">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="login()">Login to Export</button>
+    </div>
+
+    <div id="exportSection">
+        <p id="userWelcome"></p>
+        <select id="collectionSelect">
+            <option value="adminActivity">adminActivity</option>
+            <option value="admins">admins</option>
+            <option value="codeTransactions">codeTransactions</option>
+            <option value="couponCodes">couponCodes</option>
+            <option value="courses">courses</option>
+            <option value="dailyJobs">dailyJobs</option>
+            <option value="dailyTasks">dailyTasks</option>
+            <option value="history">history</option>
+            <option value="jobCompletions">jobCompletions</option>
+            <option value="leaderboard">leaderboard</option>
+            <option value="luckyBoxAttempts">luckyBoxAttempts</option>
+            <option value="luckyBoxHistory">luckyBoxHistory</option>
+            <option value="modals">modals</option>
+            <option value="monetization">monetization</option>
+            <option value="musicCompletions">musicCompletions</option>
+            <option value="musicEarnings">musicEarnings</option>
+            <option value="musicSongs">musicSongs</option>
+            <option value="products">products</option>
+            <option value="purchased">purchased</option>
+            <option value="settings">settings</option>
+            <option value="spinHistory">spinHistory</option>
+            <option value="users">users</option>
+            <option value="taskCompletions">taskCompletions</option>
+            <option value="transactions">transactions</option>
+            <option value="vendors">vendors</option>
+            <option value="withdrawals">withdrawals</option>
+        </select>
+        <button id="exportBtn" onclick="exportData()">Download JSON</button>
+        <button onclick="logout()" style="background:#dc3545;">Logout</button>
+    </div>
+
+    <div id="statusBox" class="status"></div>
+</div>
+
+<script>
+    // SAKA CONFIG DIN TSOHON PROJECT ANAN
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyBLx9SQMdtrBbaOxIpWGUWj3JqNCSfEY8c",
+  authDomain: "elitevisionnigeria.firebaseapp.com",
+  projectId: "elitevisionnigeria",
+  storageBucket: "elitevisionnigeria.firebasestorage.app",
+  messagingSenderId: "298045539559",
+  appId: "1:298045539559:web:92883625255ee5d59c8e42",
+  measurementId: "G-8G0QJX2TXR"
+};
+
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+
+    // Login Function
+    async function login() {
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        try {
+            const userCredential = await auth.signInWithEmailAndPassword(email, password);
+            document.getElementById('authSection').style.display = 'none';
+            document.getElementById('exportSection').style.display = 'block';
+            document.getElementById('userWelcome').innerText = `Logged in as: ${userCredential.user.email}`;
+            showStatus("Login Successful! Ready to export.", "success");
+        } catch (error) {
+            showStatus("Login Failed: " + error.message, "error");
+        }
+    }
+
+    // Export Function
+        async function exportData() {
+        const collName = document.getElementById('collectionSelect').value;
+        const btn = document.getElementById('exportBtn');
+        btn.disabled = true;
+        btn.innerText = "Fetching...";
+
+        try {
+            // Wannan layin ne yake kwaso asalin bayanan
+            const snapshot = await db.collection(collName).get();
+            
+            const data = {};
+            // Muna tsara kowane document ta amfani da asalin ID (UID) dinsa
+            snapshot.docs.forEach(doc => {
+                data[doc.id] = doc.data();
+            });
+
+            // Idan babu komai a cikin collection din
+            if (Object.keys(data).length === 0) {
+                showStatus(`No data found in ${collName}`, "error");
+            } else {
+                const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement("a");
+                a.href = url;
+                a.download = `${collName}.json`;
+                a.click();
+                showStatus(`Exported ${Object.keys(data).length} records from ${collName}`, "success");
+            }
+        } catch (error) {
+            showStatus("Export Failed: " + error.message, "error");
+        } finally {
+            btn.disabled = false;
+            btn.innerText = "Download JSON";
+        }
+    }
+
+
+    function logout() {
+        auth.signOut();
+        location.reload();
+    }
+
+    function showStatus(msg, type) {
+        const statusBox = document.getElementById('statusBox');
+        statusBox.innerText = msg;
+        statusBox.className = `status ${type}`;
+        statusBox.style.display = "block";
+    }
+</script>
+</body>
+</html>

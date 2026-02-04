@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - Elite Vision</title>
+    <meta name="description" content="Login to your Elite Vision dashboard and continue earning from tasks, music, games, and marketplace. Secure and fast access.">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="logo.css">
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+    <link rel="canonical" href="https://elitevisionsmarthub.com/sign-in.html">
+    <!-- Ads zones--
+  <meta name="34f0468adc675355fcb44a4d553ad0b931d947e1" content="34f0468adc675355fcb44a4d553ad0b931d947e1" />
+  <!-- Multi tag zone in banner--
+  <script>
+(function(vnnek){
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = vnnek || {};
+s.src = "\/\/remorseful-cancel.com\/bcX\/V.srdAGElI0gYjWzcq\/-eEm-9_uPZHUUlCkxPCTjYj3WMEzwYwziMFj\/EDtMNyjmc\/zqN\/jWMQyxMBgJ";
+s.async = true;
+s.referrerPolicy = 'no-referrer-when-downgrade';
+l.parentNode.insertBefore(s, l);
+})({})
+</script>
+  <!-- Notification zone--
+  <script>
+(function(nqs){
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = nqs || {};
+s.src = "\/\/remorseful-cancel.com\/baX.VnsUdYGvl\/0hYmWYcP\/Pe\/mY9tuoZdUYltkDPsTPYN3jM_zRYXziM\/j\/Y\/tONSj_c\/zWN-jeMtykNNwB";
+s.async = true;
+s.referrerPolicy = 'no-referrer-when-downgrade';
+l.parentNode.insertBefore(s, l);
+})({})
+</script>
+  <!-- Multi banner --
+  <script>
+(function(iwaoj){
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = iwaoj || {};
+s.src = "\/\/remorseful-cancel.com\/bYXMV.sKdTGilW0iYSW_cU\/BeSm\/9\/uTZvUjlVkSPlTmYP3SMezRYYzpM\/z\/AetzN\/jPc\/zmNxjmMkzMMtQe";
+s.async = true;
+s.referrerPolicy = 'no-referrer-when-downgrade';
+l.parentNode.insertBefore(s, l);
+})({})
+</script>
+  <!-- All content ads in back--
+  <script>
+(function(pgoi){
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = pgoi || {};
+s.src = "\/\/different-protection.com\/cNDZ9Q6.bE2W5xlRSqWTQR9\/Nij\/cQzBNEjtMrz\/NuCx0x2nNHzUM\/2OMSzAM\/1s";
+s.async = true;
+s.referrerPolicy = 'no-referrer-when-downgrade';
+l.parentNode.insertBefore(s, l);
+})({})
+</script>-->
+    
+     <!-- New ads is here-->
+   <script src="https://momrollback.com/6b/cb/a2/6bcba2de7329e46bc42e89b77edcb96e.js"></script>
+ <script>
+  atOptions = {
+    'key' : 'c027e155f37d2153a99f3519eef05131',
+    'format' : 'iframe',
+    'height' : 60,
+    'width' : 468,
+    'params' : {}
+  };
+</script>
+<script src="https://momrollback.com/c027e155f37d2153a99f3519eef05131/invoke.js"></script>
+<!-- AGAIN NEW SCRIPT-->
+  <!-- <script src="https://quge5.com/88/tag.min.js" data-zone="202196" async data-cfasync="false"></script>--
+  <script>(function(s){s.dataset.zone='10466480',s.src='https://al5sm.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>-->
+ <script src="https://3nbf4.com/act/files/tag.min.js?z=10469793" data-cfasync="false" async></script>
+</head>
+<body id="body">
+    <header class="header">
+        <a href="index.html" class="logo">
+          <img src="logo.jpg" alt="logo">
+            <span>Elite Vision</span>
+        </a>
+        
+        <div class="nav-right">
+            <button class="theme-toggle" id="darkModeToggle">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+<!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <img src="logo.jpg" alt="logo">
+             <span>Elite Vision</span>
+            </div>
+            <button class="close-sidebar" id="closeSidebar">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="sidebar-menu">
+            <a href="index.html" class="menu-item">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            
+            <a href="how-it-works.html" class="menu-item">
+                <i class="fas fa-cogs"></i>
+                <span>How It Works</span>
+            </a>
+            
+            <a href="about.html" class="menu-item">
+                <i class="fas fa-info-circle"></i>
+                <span>About Us</span>
+            </a>
+            
+            <a href="features.html" class="menu-item">
+                <i class="fas fa-star"></i>
+                <span>Features</span>
+            </a>
+            
+            <a href="top-earners.html" class="menu-item">
+                <i class="fas fa-trophy"></i>
+                <span>Top Earners</span>
+            </a>
+            
+            <div class="menu-dropdown">
+                <a href="#" class="menu-item dropdown-toggle">
+                    <i class="fas fa-key"></i>
+                    <span>Code</span>
+                </a>
+                <div class="dropdown-menu">
+                    <a href="vendors.html" class="dropdown-item">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Buy Coupon Code</span>
+                    </a>
+                    <a href="validation.html" class="dropdown-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Validation</span>
+                    </a>
+                </div>
+            </div>
+            
+            <a href="privacy.html" class="menu-item">
+                <i class="fas fa-shield-alt"></i>
+                <span>Privacy Policy</span>
+            </a>
+        </div>
+        
+        <div class="sidebar-auth">
+            <a href="sign-in.html" class="sidebar-btn sidebar-btn-primary">
+                <i class="fas fa-sign-in-alt"></i> Sign In
+            </a>
+            <a href="sign-up.html" class="sidebar-btn sidebar-btn-outline">
+                <i class="fas fa-user-plus"></i> Sign Up
+            </a>
+        </div>
+    </div>
+
+    <!-- Mobile Overlay -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <main class="main-content">
+        <div class="signin-container">
+            <div class="signin-card">
+                <div class="signin-header">
+                    <h1 class="signin-title">Welcome Back</h1>
+                    <p class="signin-subtitle">Sign in to your Elite Vision account</p>
+                    <p style="color:var(--error-red); font-size:12px; text-align:center; padding-top: 5px;"><i class="fas fa-warning"></i><br><b>Note:</b> you can sign-in with email and password only!</p>
+                </div>
+                
+                <form id="signinForm">
+                    <div class="form-group">
+                        <i class="fas fa-envelope form-icon"></i>
+                        <input type="email" id="email" class="form-control" placeholder=" " required>
+                        <label class="form-label" for="email">Email</label>
+                        <div class="form-error" id="emailError">Please enter your email</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <i class="fas fa-lock form-icon"></i>
+                        <input type="password" id="password" class="form-control" placeholder=" " required>
+                        <label class="form-label" for="password">Password</label>
+                        <button type="button" class="password-toggle" id="togglePassword">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        <div class="form-error" id="passwordError">Please enter your password</div>
+                    </div>
+                    
+                    <div class="form-options">
+                        <div class="remember-me">
+                            <input type="checkbox" id="rememberMe">
+                            <label for="rememberMe">Remember me</label>
+                        </div>
+                        </div>
+                    
+                    <div class="form-group" style="margin-top: 10px;">
+                        <button type="submit" class="btn btn-primary" id="loginButton">
+                            <i class="fas fa-sign-in-alt"></i> Sign In
+                        </button>
+                    </div>
+                </form>
+                
+                <div class="signup-prompt">
+                    Forgot or Invalid password? <a href="forgot-password.html">Reset password here</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="logo">
+            <img src="logo.jpg" alt="logo">
+              <span>Elite Vision</span>
+                </div><p>Join our network and start your journey to financial freedom with our proven system and supportive community. Elite Vision provides cutting-edge solutions for vendors and affiliates.</p>
+                <div class="social-links">
+                    <a href="https://whatsapp.com/channel/0029Vb7B1ay3bbV5Ny8mM21v" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://t.me/+olDhklWDFN45YzY0" class="social-link"><i class="fab fa-telegram"></i></a>
+                    <a href="https://tiktok.com/@elitevisionnet" class="social-link"><i class="fab fa-tiktok"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3><i class="fas fa-link"></i> Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="how-it-works.html"><i class="fas fa-cogs"></i> How It Works</a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+                    <li><a href="features.html"><i class="fas fa-star"></i> Features</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3><i class="fas fa-key"></i> Resources</h3>
+                <ul class="footer-links">
+                    <li><a href="vendors.html"><i class="fas fa-shopping-cart"></i> Buy Coupon Code</a></li>
+                    <li><a href="validation.html"><i class="fas fa-check-circle"></i> Code Validation</a></li>
+                    <li><a href="top-earners.html"><i class="fas fa-trophy"></i> Top Earners</a></li>
+                    <li><a href="privacy.html"><i class="fas fa-shield-alt"></i> Privacy Policy</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3><i class="fas fa-envelope"></i> Contact Us</h3>
+                <ul class="contact-info">
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Business Ave, Suite 100</li>
+                    <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                    <li><i class="fas fa-envelope"></i> elitevisionnetwork85@gmail.com</li>
+                     </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="footer-bottom-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="cookies.html">Cookie Policy</a>
+            </div>
+             <div>&copy; 2026 Elite Vision Network. All rights reserved.</div>
+        </div>
+    </footer>
+    <div class="modal modal-success" id="successModal">
+        <div class="modal-content">
+            <div class="modal-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2 class="modal-title" id="successModalTitle">Login Successful!</h2>
+            <p class="modal-message" id="successModalMessage">Welcome back to Elite Vision Network!</p>
+            <div class="modal-actions">
+                <button class="btn btn-primary" id="goToDashboard">Go to Dashboard</button>
+                <button class="btn btn-secondary" id="closeSuccessModal">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal modal-error" id="errorModal">
+        <div class="modal-content">
+            <div class="modal-icon">
+                <i class="fas fa-exclamation-triangle"></i> </div>
+            <h2 class="modal-title" id="errorModalTitle">Account Suspended!</h2>
+            <p class="modal-message" id="errorModalMessage">Your account has been suspended. Please contact support for more information.</p>
+            <div class="modal-actions">
+                <!-- <button class="btn btn-error" id="contactSupport">Contact Support</button>-->
+                <button class="btn btn-secondary" id="closeErrorModal">Close</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="sign-in.js"></script>
+</body>
+</html>

@@ -1,0 +1,1532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile - Elite Vision</title>
+    <link rel="icon" type="image/png" href="logo.jpg">   
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <link rel="stylesheet" href="logo.css">
+      <!-- Ads zones--
+  <meta name="34f0468adc675355fcb44a4d553ad0b931d947e1" content="34f0468adc675355fcb44a4d553ad0b931d947e1" />
+
+     <!-- Notification zone--
+  <script>
+(function(nqs){
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = nqs || {};
+s.src = "\/\/remorseful-cancel.com\/baX.VnsUdYGvl\/0hYmWYcP\/Pe\/mY9tuoZdUYltkDPsTPYN3jM_zRYXziM\/j\/Y\/tONSj_c\/zWN-jeMtykNNwB";
+s.async = true;
+s.referrerPolicy = 'no-referrer-when-downgrade';
+l.parentNode.insertBefore(s, l);
+})({})
+</script>
+  <!-- Multi banner --
+  <script>
+(function(iwaoj){
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = iwaoj || {};
+s.src = "\/\/remorseful-cancel.com\/bYXMV.sKdTGilW0iYSW_cU\/BeSm\/9\/uTZvUjlVkSPlTmYP3SMezRYYzpM\/z\/AetzN\/jPc\/zmNxjmMkzMMtQe";
+s.async = true;
+s.referrerPolicy = 'no-referrer-when-downgrade';
+l.parentNode.insertBefore(s, l);
+})({})
+</script>
+    
+     <!-- New ads is here-->
+   <script src="https://momrollback.com/6b/cb/a2/6bcba2de7329e46bc42e89b77edcb96e.js"></script>
+ <script>
+  atOptions = {
+    'key' : 'c027e155f37d2153a99f3519eef05131',
+    'format' : 'iframe',
+    'height' : 60,
+    'width' : 468,
+    'params' : {}
+  };
+</script>
+<script src="https://momrollback.com/c027e155f37d2153a99f3519eef05131/invoke.js"></script>
+<!-- AGAIN NEW SCRIPT-->
+    <!--<script src="https://quge5.com/88/tag.min.js" data-zone="202196" async data-cfasync="false"></script>-->
+<script>(function(s){s.dataset.zone='10466480',s.src='https://al5sm.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
+ <script src="https://3nbf4.com/act/files/tag.min.js?z=10469793" data-cfasync="false" async></script>
+     <style>
+        /* ================================================= */
+        /* 1. Global Styles & Variables */
+        /* ================================================= */
+        :root {
+            --primary-green: #10B981; 
+            --secondary-green: #34D399; 
+            --dark-green: #047857;
+            --white: #FFFFFF;
+            --light-bg: #F8FAFC;
+            --light-grey: #E2E8F0;
+            --dark-bg: #0F172A; 
+            --card-dark: #1E293B;
+            --text-color: #334155;
+            --text-light: #64748B;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --error-red: #EF4444;
+            --warning: #F59E0B;
+            --success: #10B981;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            background-color: var(--light-bg); 
+            color: var(--text-color); 
+            transition: var(--transition);
+            line-height: 1.6;
+            overflow-x: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* ================================================= */
+        /* 2. Header Styles */
+        /* ================================================= */
+        .header {
+            background: var(--white);
+            box-shadow: var(--shadow);
+            padding: 0 20px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+border-bottom: 2px solid var(--primary-green);}
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--primary-green);
+            text-decoration: none;
+        }
+
+        .logo-image {
+            width: 36px;
+            height: 36px;
+            margin-right: 12px;
+            border-radius: 8px;
+            background-color: var(--primary-green);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .menu-toggle {
+            background: none;
+            border: none;
+            font-size: 20px;
+            color: var(--text-color);
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .menu-toggle:hover {
+            background: var(--light-grey);
+            color: var(--primary-green);
+        }
+
+        .theme-toggle {
+            background: none;
+            border: none;
+            font-size: 20px;
+            color: var(--text-color);
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .theme-toggle:hover {
+            background: var(--light-grey);
+            color: var(--primary-green);
+        }
+
+    /* ================================================= */
+        /* 4. Sidebar Styles */
+        /* ================================================= */
+        .sidebar {
+            width: 280px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: fixed;
+            height: 100vh;
+            z-index: 200;
+            overflow-y: auto;
+            transform: translateX(-100%);
+            left: 0;
+            top: 0;
+background: rgba(16, 185, 129, 0.1);
+border-right: 2px solid var(--primary-green);}
+
+        .sidebar.open {
+            transform: translateX(0);
+        }
+
+        .sidebar-header {
+            padding: 24px 20px;
+            border-bottom: 1px solid var(--light-grey);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .close-sidebar {
+            background: none;
+            border: none;
+            font-size: 20px;
+            color: white;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .close-sidebar:hover {
+            color: var(--primary-green);
+        }
+
+        .sidebar-menu {
+            padding: 20px 0;
+        }
+
+        .menu-item {
+            padding: 14px 20px;
+            display: flex;
+            align-items: center;
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+            position: relative;
+            border-radius: 0 12px 12px 0;
+            margin: 5px 0;
+        }
+
+        .menu-item:hover {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), transparent);
+            color: var(--primary-green);
+            padding-left: 25px;
+            transform: translateX(5px);
+        }
+
+        .menu-item.active {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), transparent);
+            color: var(--primary-green);
+            border-right: 3px solid var(--primary-green);
+        }
+
+        .menu-item i {
+            margin-right: 12px;
+            font-size: 18px;
+            width: 24px;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .menu-item:hover i {
+            transform: scale(1.2);
+        }
+
+        .menu-dropdown {
+            position: relative;
+        }
+
+        .dropdown-toggle {
+            width: 70px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .dropdown-toggle::after {
+            content: '\f107';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            transition: var(--transition);
+        }
+
+        .menu-dropdown.active .dropdown-toggle::after {
+            transform: rotate(180deg);
+        }
+
+        .dropdown-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            background: rgba(16, 185, 129, 0.03);
+        }
+
+        .menu-dropdown.active .dropdown-menu {
+            max-height: 500px;
+        }
+
+        .dropdown-item {
+            padding: 12px 20px 12px 56px;
+            display: flex;
+            align-items: center;
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 14px;
+        }
+
+        .dropdown-item:hover {
+            background: rgba(16, 185, 129, 0.08);
+            color: var(--primary-green);
+            padding-left: 60px;
+        }
+
+        .dropdown-item i {
+            font-size: 14px;
+            margin-right: 10px;
+            transition: var(--transition);
+        }
+
+        .dropdown-item:hover i {
+            transform: scale(1.1);
+        }
+
+        .sidebar-profile {
+            padding: 20px;
+            border-top: 1px solid var(--light-grey);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .sidebar-profile:hover {
+            background: rgba(16, 185, 129, 0.05);
+        }
+
+        .sidebar-profile-img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--primary-green);
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+        }
+
+        .sidebar-profile-info {
+            flex: 1;
+        }
+
+        .sidebar-profile-name {
+            font-weight: 600;
+            font-size: 16px;
+            color: white;
+        }
+
+        .sidebar-profile-role {
+            font-size: 12px;
+            color: white;
+        }
+
+        .sidebar-profile-settings {
+            background: none;
+            border: none;
+            color: var(--primary-green);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .sidebar-profile-settings:hover {
+            color: var(--primary-green);
+            transform: rotate(90deg);
+        }
+
+    
+        /* ================================================= /
+        /* 3. Sidebar Styles /
+        /* ================================================= /
+        .sidebar {
+            width: 280px;
+            background: var(--white);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: fixed;
+            height: 100vh;
+            z-index: 200;
+            overflow-y: auto;
+            transform: translateX(-100%);
+            left: 0;
+            top: 0;
+        }
+
+        .sidebar.open {
+            transform: translateX(0);
+        }
+
+        .sidebar-header {
+            padding: 24px 20px;
+            border-bottom: 1px solid var(--light-grey);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .close-sidebar {
+            background: none;
+            border: none;
+            font-size: 20px;
+            color: var(--text-light);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .close-sidebar:hover {
+            color: var(--primary-green);
+        }
+
+        .sidebar-menu {
+            padding: 20px 0;
+        }
+
+        .menu-item {
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            color: var(--text-color);
+            text-decoration: none;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .menu-item:hover {
+            background-color: rgba(16, 185, 129, 0.05);
+            color: var(--primary-green);
+            padding-left: 25px;
+        }
+
+        .menu-item.active {
+            background-color: rgba(16, 185, 129, 0.1);
+            color: var(--primary-green);
+            border-right: 3px solid var(--primary-green);
+        }
+
+        .menu-item i {
+            margin-right: 12px;
+            font-size: 18px;
+            width: 24px;
+            text-align: center;
+        }
+
+        .menu-dropdown {
+            position: relative;
+        }
+
+        .dropdown-toggle {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .dropdown-toggle::after {
+            content: '\f107';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            transition: var(--transition);
+        }
+
+        .menu-dropdown.active .dropdown-toggle::after {
+            transform: rotate(180deg);
+        }
+
+        .dropdown-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            background: rgba(16, 185, 129, 0.03);
+        }
+
+        .menu-dropdown.active .dropdown-menu {
+            max-height: 500px;
+        }
+
+        .dropdown-item {
+            padding: 10px 20px 10px 56px;
+            display: flex;
+            align-items: center;
+            color: var(--text-color);
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 14px;
+        }
+
+        .dropdown-item:hover {
+            background-color: rgba(16, 185, 129, 0.05);
+            color: var(--primary-green);
+        }
+
+        .dropdown-item i {
+            font-size: 14px;
+            margin-right: 10px;
+        }
+
+        .sidebar-auth {
+            padding: 20px;
+            border-top: 1px solid var(--light-grey);
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .sidebar-btn {
+            padding: 12px 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            text-align: center;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .sidebar-btn-primary {
+            background: var(--primary-green);
+            color: white;
+        }
+
+        .sidebar-btn-primary:hover {
+            background: var(--dark-green);
+        }
+
+        .sidebar-btn-outline {
+            background: transparent;
+            border: 1px solid var(--light-grey);
+            color: var(--text-color);
+        }
+
+        .sidebar-btn-outline:hover {
+            background: var(--light-grey);
+        }*/
+
+        /* ================================================= */
+        /* 4. Main Content Area */
+        /* ================================================= */
+        .main-content {
+            flex: 1;
+            padding: 30px 20px;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .profile-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .page-title h1 {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary-green);
+            margin-bottom: 8px;
+        }
+
+        .page-title p {
+            color: var(--text-light);
+            font-size: 16px;
+        }
+
+        /* ================================================= */
+        /* 5. Profile Card */
+        /* ================================================= */
+        .profile-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .profile-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .profile-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            animation: fadeInUp 0.6s ease-out;
+            border-top: 5px solid #10B981;
+            border-bottom: 5px solid #10B981;
+        }
+
+        .profile-card:hover {
+            box-shadow: var(--shadow-lg);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .profile-picture-section {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid var(--light-grey);
+        }
+
+        .profile-picture {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 20px;
+        }
+
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--primary-green);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .profile-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: var(--transition);
+            cursor: pointer;
+border: 5px dashed #10B981;}
+
+        .profile-overlay:hover {
+            opacity: 1;
+}
+
+        .profile-overlay i {
+            color: white;
+            font-size: 24px;
+        }
+
+        .profile-name {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .profile-role {
+            color: var(--text-light);
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .profile-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 15px;
+            background: var(--light-bg);
+            border-radius: 8px;
+            transition: var(--transition);
+        }
+
+        .stat-item:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+
+        .stat-value {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary-green);
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: var(--text-light);
+        }
+
+        /* ================================================= */
+        /* 6. Form Styles */
+        /* ================================================= */
+        .form-group {
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--text-color);
+            font-size: 14px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid var(--light-grey);
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            transition: var(--transition);
+            font-size: 14px;
+            background: var(--white);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-green);
+            box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+        }
+
+        .form-control:disabled {
+            background: var(--light-bg);
+            color: var(--text-light);
+            cursor: not-allowed;
+        }
+
+        .form-icon {
+            position: absolute;
+            right: 16px;
+            top: 40px;
+            color: var(--text-light);
+        }
+
+        .form-control:focus ~ .form-icon {
+            color: var(--primary-green);
+        }
+
+        .form-row {
+            display: flex;
+            gap: 16px;
+        }
+
+        .form-row .form-group {
+            flex: 1;
+        }
+
+        .form-hint {
+            font-size: 12px;
+            color: var(--text-light);
+            margin-top: 6px;
+        }
+
+        .form-error {
+            font-size: 12px;
+            color: var(--error-red);
+            margin-top: 6px;
+            display: none;
+        }
+
+        .form-error.show {
+            display: block;
+        }
+
+        /* ================================================= */
+        /* 7. Button Styles */
+        /* ================================================= */
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-size: 14px;
+        }
+
+        .btn-primary {
+            background: var(--primary-green);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--dark-green);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(16, 185, 129, 0.3);
+        }
+
+        .btn-primary:active {
+            transform: translateY(0);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 1px solid var(--light-grey);
+            color: var(--text-color);
+        }
+
+        .btn-secondary:hover {
+            background: var(--light-grey);
+        }
+
+        .btn-full {
+            width: 100%;
+            border: 2px dashed #10B981;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 12px;
+            margin-top: 30px;
+        }
+
+        /* ================================================= */
+        /* 8. Footer Styles */
+        /* ================================================= */
+    
+       .bottom-nav {
+            position: grid;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 -5px 25px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-around;
+            padding: 15px 0;
+            z-index: 90;
+            border-top: 2px solid var(--primary-green);
+        }
+
+        body.dark-mode .bottom-nav {
+            background: rgba(30, 41, 59, 0.95);
+            border-top: 1px solid rgba(16, 185, 129, 0.2);
+        }
+
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: var(--text-light);
+            transition: var(--transition);
+            position: relative;
+            padding: 8px 12px;
+            border-radius: 15px;
+            min-width: 70px;
+        }
+
+        body.dark-mode .nav-item {
+            color: #94A3B8;
+        }
+
+        .nav-item.active {
+            color: var(--primary-green);
+            background: rgba(16, 185, 129, 0.1);
+            transform: translateY(-5px);
+        }
+
+        .nav-item:hover {
+            color: var(--primary-green);
+            transform: translateY(-3px);
+        }
+
+        .nav-icon {
+            font-size: 20px;
+            margin-bottom: 4px;
+            transition: var(--transition);
+        }
+
+        .nav-item:hover .nav-icon {
+            transform: scale(1.2);
+        }
+
+        .nav-label {
+            font-size: 12px;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        /* ================================================= */
+        /* 9. Dark Mode Styles */
+        /* ================================================= */
+        .dark-mode {
+            background: var(--dark-bg);
+            color: #E2E8F0;
+        }
+
+        .dark-mode .header,
+        .dark-mode .profile-card,
+        .dark-mode .footer,
+        .dark-mode .sidebar {
+            background: var(--card-dark);
+            color: #E2E8F0;
+        }
+
+        .dark-mode .form-control {
+            background: #334155;
+            border-color: #475569;
+            color: #E2E8F0;
+        }
+
+        .dark-mode .form-control:focus {
+            border-color: var(--primary-green);
+        }
+
+        .dark-mode .form-control:disabled {
+            background: #1E293B;
+            color: #94A3B8;
+        }
+
+        .dark-mode .menu-item {
+            color: #CBD5E1;
+        }
+
+        .dark-mode .menu-item:hover {
+            background: rgba(16, 185, 129, 0.1);
+            color: var(--secondary-green);
+        }
+
+        .dark-mode .btn-secondary {
+            border-color: #475569;
+            color: #CBD5E1;
+        }
+
+        .dark-mode .btn-secondary:hover {
+            background: #334155;
+        }
+
+        .dark-mode .footer-section p,
+        .dark-mode .footer-links a,
+        .dark-mode .contact-info li {
+            color: #94A3B8;
+        }
+
+        .dark-mode .footer-links a:hover {
+            color: var(--secondary-green);
+        }
+
+        .dark-mode .social-link {
+            background: #334155;
+            color: #94A3B8;
+        }
+
+        .dark-mode .social-link:hover {
+            background: var(--primary-green);
+            color: white;
+        }
+
+        .dark-mode .stat-item {
+            background: #1E293B;
+        }
+
+       /* ================================================= */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+
+        .modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-content {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 30px;
+            width: 90%;
+            max-width: 400px;
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-20px) scale(0.9);
+            transition: var(--transition);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .modal.active .modal-content {
+            transform: translateY(0) scale(1);
+            animation: modalPop 0.5s ease-out;
+        }
+
+        @keyframes modalPop {
+            0% {
+                transform: translateY(-20px) scale(0.9);
+                opacity: 0;
+            }
+            70% {
+                transform: translateY(10px) scale(1.02);
+            }
+            100% {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
+        }
+
+        .modal-icon {
+            font-size: 60px;
+            color: var(--success);
+            margin-bottom: 20px;
+            animation: bounce 1s ease-in-out;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+        .modal-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-green);
+            margin-bottom: 10px;
+        }
+
+        .modal-message {
+            color: var(--text-light);
+            margin-bottom: 25px;
+        }
+
+        .modal-actions {
+            display: flex;
+            gap: 12px;
+        }
+
+        .modal-actions .btn {
+            flex: 1;
+        }
+
+    
+        /* ================================================= */
+        /* 10. Responsive Styles */
+        /* ================================================= */
+        @media (max-width: 768px) {
+            .profile-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+            
+            .profile-stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+            
+            .btn-group {
+                flex-direction: column;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .footer-bottom-links {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main-content {
+                padding: 20px 16px;
+            }
+            
+            .profile-card {
+                padding: 20px;
+            }
+            
+            .profile-picture {
+                width: 120px;
+                height: 120px;
+            }
+        }
+
+        /* ================================================= */
+        /* 11. Mobile Overlay */
+        /* ================================================= */
+        .mobile-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 150;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+          }
+
+        .mobile-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+    </style>
+</head>
+<body id="body">
+    <!-- Header -->
+    <header class="header">
+        <a href="index.html" class="logo">
+             <img src="logo.jpg" alt="logo">
+               <span>Elite Vision</span>
+        </a>
+        
+        <div class="nav-right">
+            <button class="theme-toggle" id="darkModeToggle">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+        <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <img src="logo.jpg" alt="logo">
+                <span style="color: white;">Elite Vision</span>
+            </div>
+            <button class="close-sidebar" id="closeSidebar">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="sidebar-menu">
+            <a href="index.html" class="menu-item">
+                <i class="fas fa-tachometer-alt"></i>
+                <span>Dashboard</span>
+            </a>
+            
+            <a href="daily-jobs.html" class="menu-item">
+                <i class="fas fa-briefcase"></i>
+                <span>Daily Job</span>
+            </a>
+            
+            
+            <a href="daily-tasks.html" class="menu-item">
+                <i class="fas fa-tasks"></i>
+                <span>Daily Tasks</span>
+            </a>
+            
+            <a href="music.html" class="menu-item">
+                <i class="fas fa-music"></i>
+                <span>Music</span>
+            </a>
+            
+            
+            <a href="spin-win.html" class="menu-item">
+                <i class="fas fa-sync-alt"></i>
+                <span>Spin and Win</span>
+            </a>
+            
+            <a href="fruit-game.html" class="menu-item">
+    <i class="fas fa-lemon"></i>
+    <span>Fruit Game</span>
+    <span style="background: #EF4444; color: white; padding: 2px 8px; border-radius: 20px; font-size: 10px; font-weight: 700; margin-left: 10px; box-shadow: 0 2px 5px rgba(239,68,68,0.4); animation: pulse 2s infinite;">NEW</span>
+</a>
+
+            
+             <div class="menu-dropdown">
+                <a href="#" class="menu-item dropdown-toggle">
+                    <i class="fas fa-gamepad"></i>
+                    <span>Games</span>
+                </a>
+                <div class="dropdown-menu">
+                    <a href="lucky-box-game.html" class="dropdown-item">
+                        <i class="fab fa-dice"></i>
+                        <span>Lucky Boxs</span>
+                    </a>
+                    <div class="dropdown-menu">                 
+                    <a href="spin-win.html" class="dropdown-item">
+                <i class="fas fa-sync-alt"></i>
+                <span>Spin and Win</span>
+            </a>  </div>                 
+                </div>
+            </div>
+            
+            <a href="digital-skills.html" class="menu-item">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Digital Skills</span>
+            </a>
+            
+            <div class="menu-dropdown">
+                <a href="#" class="menu-item dropdown-toggle">
+                    <i class="fas fa-store"></i>
+                    <span>Marketplace</span>
+                </a>
+                <div class="dropdown-menu">
+                    <a href="marketplace.html" class="dropdown-item">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span>Marketplace</span>
+                    </a>
+                    <a href="upload-product.html" class="dropdown-item">
+                        <i class="fas fa-upload"></i>
+                        <span>Upload Product</span>
+                    </a>
+                    <!--<a href="my-products.html" class="dropdown-item">
+                        <i class="fas fa-boxes"></i>
+                        <span>My Products</span>
+                    </a>-->
+                </div>
+            </div>
+            
+            <!--<a href="vendors.html" class="menu-item" id="vendor">
+                <i class="fas fa-store"></i>
+                <span>Vendor Dashboard</span>
+            </a>-->
+            
+            <a href="monetization.html" class="menu-item">
+                <i class="fas fa-money-bill-wave"></i>
+                <span>Monetization</span>
+            </a>
+                                                
+            <a href="withdraw.html" class="menu-item">
+                <i class="fas fa-wallet"></i>
+                <span>Withdraw</span>
+            </a>
+            
+            <a href="referrals.html" class="menu-item">
+                <i class="fas fa-users"></i>
+                <span>My Referrals</span>
+                <span style="background: #EF4444; color: white; padding: 2px 8px; border-radius: 20px; font-size: 10px; font-weight: 700; margin-left: 10px; box-shadow: 0 2px 5px rgba(239,68,68,0.4); animation: pulse 2s infinite;">NEW</span>
+                
+            </a>
+            <a href="bank-setting.html" class="menu-item">
+                <i class="fas fa-university"></i>
+                <span>Bank Setting</span>
+            </a>
+            
+            <a href="profile.html" class="menu-item active">
+                <i class="fas fa-user"></i>
+                <span>Profile</span>
+            </a>
+            <a id="logoutBtn" class="menu-item">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Logout</span>
+            </a>
+        </div>
+        
+        <div class="sidebar-profile">
+            <img src="avatar.png" alt="Profile" class="sidebar-profile-img" id="sidebarProfileImg">
+            <div class="sidebar-profile-info">
+                <div class="sidebar-profile-name" id="sidebarProfileName">Loading...</div>
+                <div class="sidebar-profile-role" id="sidebarProfileRole">Loading...</div>
+            </div>
+            <button class="sidebar-profile-settings">
+                <a href="profile.html" ><i class="fas fa-cog" style="color: white;"></i></a>
+            </button>
+        </div>
+    </div>
+
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <!-- Sidebar --
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                 <img src="logo.jpg" alt="logo">
+               <span>Elite Vision</span>
+            </div>
+            <button class="close-sidebar" id="closeSidebar">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="sidebar-menu">
+            <a href="index.html" class="menu-item">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            
+            <a href="dashboard.html" class="menu-item">
+                <i class="fas fa-tachometer-alt"></i>
+                <span>Dashboard</span>
+            </a>
+            
+            <a href="profile.html" class="menu-item active">
+                <i class="fas fa-user"></i>
+                <span>Profile</span>
+            </a>
+            
+            <a href="earners.html" class="menu-item">
+                <i class="fas fa-trophy"></i>
+                <span>Top Earners</span>
+            </a>
+            
+            <div class="menu-dropdown">
+                <a href="#" class="menu-item dropdown-toggle">
+                    <i class="fas fa-key"></i>
+                    <span>Code</span>
+                </a>
+                <div class="dropdown-menu">
+                    <a href="buy-coupon.html" class="dropdown-item">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Buy Coupon Code</span>
+                    </a>
+                    <a href="validation.html" class="dropdown-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Validation</span>
+                    </a>
+                </div>
+            </div>
+            
+            <a href="privacy.html" class="menu-item">
+                <i class="fas fa-shield-alt"></i>
+                <span>Privacy Policy</span>
+            </a>
+        </div>
+        
+        <div class="sidebar-auth">
+            <a href="login.html" class="sidebar-btn sidebar-btn-outline">
+                <i class="fas fa-sign-out-alt"></i> Logout
+            </a>
+        </div>
+    </div>
+
+    <!-- Mobile Overlay --
+    <div class="mobile-overlay" id="mobileOverlay"></div>-->
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="profile-header">
+            <div class="page-title">
+                <h1>User Profile</h1>
+                <p>Manage your personal information and account settings</p>
+            </div>
+        </div>
+
+        <div class="profile-container">
+            <!-- Profile Picture & Stats Card -->
+            <div class="profile-card">
+                <div class="profile-picture-section">
+                    <div class="profile-picture">
+                         <img class="profile-img" id="profileImg" alt="Profile Picture">
+                        <div class="profile-overlay" id="changePictureBtn">
+                            <i class="fas fa-camera"></i>
+                        </div>
+                    </div>
+                    <h2 class="profile-name">John Doe</h2>
+                    <p class="profile-role">Verified <i class="fas fa-check-circle" style="color: #10B981;"></i></p>
+                    <p style="color:var(--error-red); font-size:12px; text-align:center; padding-top: 5px;"><i class="fas fa-warning"></i><br><b>Note:</b> you can upload image ontil you have referrals even 1 person!</p>
+              
+                    <input type="file" id="profilePictureInput" accept="image/*" style="display: none;">
+                    <div class="btn-group">
+                    <button class="btn btn-secondary btn-full" id="uploadPictureBtn">
+                        <i class="fas fa-upload"></i> Change Profile Picture
+                    </button>
+                    
+                        <button type="submit" class="btn btn-primary" id="savePicture">
+                            <i class="fas fa-save"></i> Save Changes
+                        </button>                        
+                    </div>
+                </div>                
+            </div>
+
+            <!-- Profile Information Card -->
+            <div class="profile-card">
+                <h3 style="margin-bottom: 20px; color: var(--primary-green);">
+                    <i class="fas fa-user-circle"></i> Personal Information
+                </h3>
+
+                <form id="profileForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="fullName">
+                                Full Name <span style="color: var(--primary-green);">(Editable)</span>
+                            </label>
+                            <input type="text" id="fullName" class="form-control"  value="John Doe">
+                            <i class="fas fa-user form-icon"></i>
+                            <div class="form-hint">Your full name as it should appear</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="phoneNumber">
+                                Phone Number <span style="color: var(--primary-green);">(Editable)</span>
+                            </label>
+                            <input type="tel" id="phoneNumber" class="form-control" value="080-1234-5678">
+                            <i class="fas fa-phone form-icon"></i>
+                            <div class="form-hint">Your contact phone number</div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="username">
+                                Username 👉 <span style="color: var(--error-red);">(Cannot Edit)</span>
+                            </label>
+                            <input type="text" id="username" class="form-control" value="John" disabled>
+                            <i class="fas fa-at form-icon"></i>
+                            <div class="form-hint">Your unique username cannot be changed</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="email">
+                                Email Address 👉 <span style="color: var(--error-red);">(Cannot Edit)</span>
+                            </label>                            
+                            <input type="email" id="email" class="form-control" value="abdul@example.com" disabled>
+                            <i class="fas fa-envelope form-icon"></i>                           
+                            <div class="form-hint">Your email address cannot be changed</div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="country">
+                                Country 👉 <span style="color: var(--error-red);">(Cannot Edit)</span>
+                            </label>
+                            <input type="text" id="country" class="form-control" value="Nigeria" disabled>
+                            <i class="fas fa-globe form-icon"></i>
+                            <div class="form-hint">Your country cannot be changed</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="createdAt">
+                                Account Created 👉 <span style="color: var(--error-red);">(Cannot Edit)</span>
+                            </label>
+                            <input type="text" id="createdAt" class="form-control" value="January 15, 2025" disabled>
+                            <i class="fas fa-calendar form-icon"></i>
+                            <div class="form-hint">Date your account was created</div>
+                        </div>
+                    </div>
+
+                    <div class="btn-group">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-save"></i> Save Changes
+                        </button>                        
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+   
+    
+        <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item">
+            <i class="fas fa-tachometer-alt nav-icon"></i>
+            <span class="nav-label">Dashboard</span>
+        </a>
+        <a href="daily-task.html" class="nav-item">
+            <i class="fas fa-tasks nav-icon"></i>
+            <span class="nav-label">Tasks</span>
+        </a>
+        <a href="withdraw.html" class="nav-item">
+            <i class="fas fa-wallet nav-icon"></i>
+            <span class="nav-label">Withdraw</span>
+        </a>
+        <a href="digital-skills.html" class="nav-item">
+            <i class="fas fa-graduation-cap nav-icon"></i>
+            <span class="nav-label">Skills</span>
+        </a>
+        <a href="profile.html" class="nav-item active">
+            <i class="fas fa-user nav-icon"></i>
+            <span class="nav-label">Profile</span>
+        </a>
+    </nav>
+    <!-- Success Modal -->
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <div class="modal-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2 class="modal-title">Registration Successful!</h2>
+            <p class="modal-message">Your account has been created successfully. Welcome to Elite Vision Network!</p>
+            <div class="modal-actions">
+                <button class="btn btn-primary" id="goToDashboard">Go to Dashboard</button>
+                <button class="btn btn-secondary" id="closeSuccessModal">Close</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="profile.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+
+/* DARK MODE BACKGROUND FOR ALL CARDS (kamar sidebar) */
+.wallet-card,
+.quick-action-card,
+.stat-card,
+.referral-card,
+.ad-card,
+.table-container {
+    background: rgba(30, 41, 59, 0.85) !important;  /* dark slate kamar sidebar*/ /
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(16, 185, 129, 0.2) !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+
+/* Text a saman logo ya fito karara */
+.wallet-card > *,
+.quick-action-card > *,
+.stat-card > *,
+.referral-card > *,
+.ad-card > * {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* === CARDS SU ZAMA DAIDAI IRIN SIDEBAR + LOGO ANIMATION === */
+.wallet-card,
+.quick-action-card,
+.stat-card,
+.referral-card,
+.ad-card,
+.table-container {
+    background: rgba(16, 185, 129, 0.12) !important;   /* daidai irin sidebar */
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(16, 185, 129, 0.2) !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+/* Logo a baya da opacity + yana juyawa a hankali */
+.wallet-card::before,
+.quick-action-card::before,
+.stat-card::before,
+.referral-card::before,
+.ad-card::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 380px;
+    height: 380px;
+    background: url('logo.png') center/contain no-repeat;
+    opacity: 0.06;
+    pointer-events: none;
+    z-index: 0;
+    animation: slowRotate 40s linear infinite;
+}
+
+/* Animation na logo (juyawa a hankali) */
+@keyframes slowRotate {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to   { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Duk abun da ke cikin card ya kasance a sama */
+.wallet-card > *,
+.quick-action-card > *,
+.stat-card > *,
+.referral-card > *,
+.ad-card > *,
+.modal-content > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Hover effect kamar sidebar */
+.wallet-card:hover,
+.quick-action-card:hover,
+.stat-card:hover,
+.referral-card:hover,
+.ad-card:hover {
+    background: rgba(16, 185, 129, 0.18) !important;
+    transform: translateY(-6px);
+    box-shadow: 0 12px 40px rgba(16, 185, 129, 0.2);
+}

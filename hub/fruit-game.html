@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Fruit Blade - Elite Vision</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Ads zones--
+  <meta name="34f0468adc675355fcb44a4d553ad0b931d947e1" content="34f0468adc675355fcb44a4d553ad0b931d947e1" />
+  <!-- Multi tag zone in banner--
+  <script>
+(function(vnnek){
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = vnnek || {};
+s.src = "\/\/remorseful-cancel.com\/bcX\/V.srdAGElI0gYjWzcq\/-eEm-9_uPZHUUlCkxPCTjYj3WMEzwYwziMFj\/EDtMNyjmc\/zqN\/jWMQyxMBgJ";
+s.async = true;
+s.referrerPolicy = 'no-referrer-when-downgrade';
+l.parentNode.insertBefore(s, l);
+})({})
+</script>
+  <!-- Notification zone--
+  <script>
+(function(nqs){
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = nqs || {};
+s.src = "\/\/remorseful-cancel.com\/baX.VnsUdYGvl\/0hYmWYcP\/Pe\/mY9tuoZdUYltkDPsTPYN3jM_zRYXziM\/j\/Y\/tONSj_c\/zWN-jeMtykNNwB";
+s.async = true;
+s.referrerPolicy = 'no-referrer-when-downgrade';
+l.parentNode.insertBefore(s, l);
+})({})
+</script>
+  <!-- Multi banner --
+  <script>
+(function(iwaoj){
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = iwaoj || {};
+s.src = "\/\/remorseful-cancel.com\/bYXMV.sKdTGilW0iYSW_cU\/BeSm\/9\/uTZvUjlVkSPlTmYP3SMezRYYzpM\/z\/AetzN\/jPc\/zmNxjmMkzMMtQe";
+s.async = true;
+s.referrerPolicy = 'no-referrer-when-downgrade';
+l.parentNode.insertBefore(s, l);
+})({})
+</script>
+  <!-- All content ads in back--
+  <script>
+(function(pgoi){
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = pgoi || {};
+s.src = "\/\/different-protection.com\/cNDZ9Q6.bE2W5xlRSqWTQR9\/Nij\/cQzBNEjtMrz\/NuCx0x2nNHzUM\/2OMSzAM\/1s";
+s.async = true;
+s.referrerPolicy = 'no-referrer-when-downgrade';
+l.parentNode.insertBefore(s, l);
+})({})
+</script>
+  
+  <!-- New ads is here-->
+   <script src="https://momrollback.com/6b/cb/a2/6bcba2de7329e46bc42e89b77edcb96e.js"></script>
+ <script>
+  atOptions = {
+    'key' : 'c027e155f37d2153a99f3519eef05131',
+    'format' : 'iframe',
+    'height' : 60,
+    'width' : 468,
+    'params' : {}
+  };
+</script>
+<script src="https://momrollback.com/c027e155f37d2153a99f3519eef05131/invoke.js"></script>
+<!-- AGAIN NEW SCRIPT-->
+    <!--<script src="https://quge5.com/88/tag.min.js" data-zone="202196" async data-cfasync="false"></script>-->
+<script>(function(s){s.dataset.zone='10466480',s.src='https://al5sm.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
+ 
+    <style>
+        /* ================================================= */
+        /* 1. Global Variables & Theme */
+        /* ================================================= */
+        :root {
+            --primary-green: #10B981;
+            --secondary-green: #34D399;
+            --dark-green: #047857;
+            --white: #FFFFFF;
+            --dark-bg: #0F172A;
+            --card-dark: #1E293B;
+            --text-color: #334155;
+            --text-light: #64748B;
+            --error-red: #EF4444;
+            --warning: #F59E0B;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        /* Default Dark Mode Styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #000000 100%);
+            color: #E2E8F0;
+            overflow: hidden; /* Important for game */
+            height: 100vh;
+            width: 100vw;
+            user-select: none;
+            touch-action: none;
+        }
+
+        /* Light Mode Styling (When 'dark-mode' class is REMOVED) */
+        body.light-mode {
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+            color: var(--text-color);
+        }
+
+        /* ================================================= */
+        /* 2. Game Canvas (Background) */
+        /* ================================================= */
+        #game {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        /* ================================================= */
+        /* 3. Header & HUD */
+        /* ================================================= */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            z-index: 50;
+            pointer-events: none; /* Let touches pass through to game */
+        }
+
+        .header-content {
+            pointer-events: auto; /* Re-enable clicks for buttons */
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            align-items: center;
+        }
+
+        /* Score Box */
+        .score-container {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            padding: 10px 25px;
+            border-radius: 16px;
+            text-align: center;
+        }
+
+        body.light-mode .score-container {
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid var(--primary-green);
+        }
+
+        .score-label {
+            font-size: 10px;
+            text-transform: uppercase;
+            color: var(--primary-green);
+            font-weight: 700;
+        }
+
+        .score-value {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: white;
+        }
+
+        body.light-mode .score-value { color: var(--text-color); }
+
+        /* Controls */
+        .nav-right {
+            display: flex;
+            gap: 10px;
+        }
+
+        .menu-toggle, .theme-toggle {
+            background: rgba(16, 185, 129, 0.2);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            color: white;
+            width: 45px;
+            height: 45px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            cursor: pointer;
+            backdrop-filter: blur(5px);
+            pointer-events: auto;
+        }
+
+        body.light-mode .menu-toggle, 
+        body.light-mode .theme-toggle {
+            background: white;
+            color: var(--dark-green);
+        }
+
+        /* ================================================= */
+        /* 4. Sidebar (From Digital Skills) */
+        /* ================================================= */
+        .sidebar {
+            width: 280px;
+            background: rgba(15, 23, 42, 0.98);
+            backdrop-filter: blur(20px);
+            border-right: 1px solid rgba(16, 185, 129, 0.2);
+            position: fixed;
+            height: 100vh;
+            z-index: 200;
+            overflow-y: auto;
+            transform: translateX(-100%);
+            left: 0;
+            top: 0;
+            transition: var(--transition);
+        }
+
+        body.light-mode .sidebar {
+            background: rgba(255, 255, 255, 0.98);
+            border-right: 1px solid var(--primary-green);
+        }
+
+        .sidebar.open { transform: translateX(0); }
+
+        .sidebar-header {
+            padding: 24px 20px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        body.light-mode .sidebar-header { border-bottom-color: var(--light-grey); }
+
+        .sidebar-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            color: var(--primary-green);
+            font-size: 18px;
+        }
+
+        .sidebar-logo img {
+            width: 30px;
+            height: 30px;
+            border-radius: 6px;
+        }
+
+        .close-sidebar {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        
+        body.light-mode .close-sidebar { color: var(--text-color); }
+
+        .sidebar-menu { padding: 20px 0; }
+
+        .menu-item {
+            padding: 14px 20px;
+            display: flex;
+            align-items: center;
+            color: #94A3B8;
+            text-decoration: none;
+            transition: var(--transition);
+            border-radius: 0 12px 12px 0;
+            margin: 5px 0;
+            font-size: 14px;
+        }
+
+        body.light-mode .menu-item { color: var(--text-color); }
+
+        .menu-item:hover, .menu-item.active {
+            background: rgba(16, 185, 129, 0.1);
+            color: var(--primary-green);
+            border-right: 3px solid var(--primary-green);
+        }
+
+        .menu-item i { width: 25px; font-size: 16px; }
+
+        /* Sidebar Profile */
+        .sidebar-profile {
+            padding: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: auto;
+        }
+
+        .sidebar-profile-img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid var(--primary-green);
+        }
+
+        .sidebar-profile-info div { font-size: 12px; color: white; }
+        body.light-mode .sidebar-profile-info div { color: var(--text-color); }
+
+        /* Overlay */
+        .mobile-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            z-index: 150;
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.3s;
+        }
+        .mobile-overlay.active { opacity: 1; visibility: visible; }
+
+        /* ================================================= */
+        /* 5. Start Screen with WARNING */
+        /* ================================================= */
+        .start-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.92);
+            backdrop-filter: blur(15px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 100;
+            padding: 20px;
+            text-align: center;
+            transition: opacity 0.5s;
+        }
+
+        .start-overlay.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .game-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 40px;
+            font-weight: 900;
+            color: var(--primary-green);
+            margin-bottom: 20px;
+            text-shadow: 0 0 20px rgba(16, 185, 129, 0.4);
+        }
+
+        /* WARNING BOX */
+        .warning-box {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid var(--error-red);
+            padding: 15px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            max-width: 400px;
+        }
+
+        .warning-icon {
+            font-size: 24px;
+            color: var(--error-red);
+            margin-bottom: 10px;
+        }
+
+        .warning-text {
+            color: #FCA5A5;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .play-btn {
+            background: linear-gradient(135deg, var(--primary-green), var(--dark-green));
+            color: white;
+            border: none;
+            padding: 16px 50px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 0 25px rgba(16, 185, 129, 0.4);
+            transition: transform 0.2s;
+            text-transform: uppercase;
+        }
+
+        .play-btn:active { transform: scale(0.95); }
+
+        /* Game Over Modal */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 200;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s;
+        }
+        .modal.active { opacity: 1; pointer-events: auto; }
+
+        .modal-card {
+            background: var(--card-dark);
+            border: 2px solid var(--primary-green);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            width: 90%;
+            max-width: 350px;
+        }
+        
+        body.light-mode .modal-card { background: white; }
+
+        .modal-title { font-size: 28px; font-weight: bold; color: var(--error-red); margin-bottom: 10px; }
+        .score-result { font-size: 48px; font-weight: bold; color: var(--primary-green); font-family: 'Orbitron'; }
+
+    </style>
+</head>
+<body class="dark-mode"> <canvas id="game"></canvas>
+
+    <header class="header">
+        <div class="header-content">
+            <div class="score-container">
+                <div class="score-label">Score</div>
+                <div class="score-value" id="score">0</div>
+            </div>
+
+            <div class="nav-right">
+                <button class="theme-toggle" id="darkModeToggle">
+                    <i class="fas fa-sun"></i> </button>
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="start-overlay" id="startOverlay">
+        <div class="game-title">FRUIT BLADE</div>
+        
+        <!--  <div class="warning-box">
+            <div class="warning-icon"><i class="fas fa-check-circle"></i></div>
+            <div class="warning-text">
+                <strong>MUHIMMI:</strong> Wannan game an yi shi ne kawai domin nishadi da debe kewa. 
+                <br><br>
+                <strong>Babu wani reward na kudi</strong> da za a samu a cikin wannan wasan.
+            </div>
+        </div>--
+<div class="warning-box">
+    <div class="warning-icon"><i class="fas fa-circle-info"></i></div>
+    <div class="warning-text">
+        <strong>Game Overview</strong><br><br>
+        A simple and enjoyable game experience designed for casual users.
+    </div>
+</div>-->
+        <button class="play-btn" id="startGameBtn">
+            <i class="fas fa-play"></i> Start Play
+        </button>
+    </div>
+
+    <div class="modal" id="gameOverModal">
+        <div class="modal-card">
+            <div class="modal-title">GAME OVER</div>
+            <p>Score</p>
+            <div class="score-result" id="finalScore">0</div>
+            <p style="margin-top: 10px; color: #888;">Best: <span id="highScoreDisplay">0</span></p>
+            <br>
+            <button class="play-btn" id="modalRestartBtn" style="padding: 12px 30px; font-size: 16px;">
+                Play Again
+            </button>
+        </div>
+    </div>
+
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-logo">
+                <img src="logo.jpg" alt="logo">
+                <span>Elite Vision</span>
+            </div>
+            <button class="close-sidebar" id="closeSidebar">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="sidebar-menu">
+            <a href="index.html" class="menu-item">
+                <i class="fas fa-tachometer-alt"></i>
+                <span>Dashboard</span>
+            </a>
+            
+            <a href="daily-tasks.html" class="menu-item">
+                <i class="fas fa-tasks"></i>
+                <span>Daily Tasks</span>
+            </a>
+            
+            <a href="#" class="menu-item active">
+                <i class="fas fa-gamepad"></i>
+                <span>Fruit Game</span>
+            </a>
+
+            <a href="spin-win.html" class="menu-item">
+                <i class="fas fa-sync-alt"></i>
+                <span>Spin and Win</span>
+            </a>
+            
+            <a href="digital-skills.html" class="menu-item">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Digital Skills</span>
+            </a>
+            
+            <a href="marketplace.html" class="menu-item">
+                <i class="fas fa-store"></i>
+                <span>Marketplace</span>
+            </a>
+
+            <a href="withdraw.html" class="menu-item">
+                <i class="fas fa-wallet"></i>
+                <span>Withdraw</span>
+            </a>
+            
+            <a href="profile.html" class="menu-item">
+                <i class="fas fa-user"></i>
+                <span>Profile</span>
+            </a>
+        </div>
+        
+        <div class="sidebar-profile">
+            <img src="avatar.png" alt="Profile" class="sidebar-profile-img">
+            <div class="sidebar-profile-info">
+                <div id="sidebarName">User</div>
+                <div style="opacity: 0.7;">Member</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <script src="fruit-game.js"></script>
+</body>
+</html>

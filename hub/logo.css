@@ -1,0 +1,8 @@
+.logo img {
+    height: 24px;        
+    width: auto;         
+    display: block;
+    object-fit: contain; 
+        padding-right: 5px;
+    }
+
