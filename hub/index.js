@@ -420,7 +420,7 @@ function updateUserUI(userData) {
         animateCountUp(totalWalletsBalanceEl, totalBalance);
         animateCountUp(totalWalletsEarnedEl, totalEarned);
         
-        const referralLink = `${window.location.origin}/sign-up.ht?ref=${username}`;
+        const referralLink = `${window.location.origin}/sign-up.html?ref=${username}`;
         referralLinkInputEl.value = referralLink;
         
         console.log("✅ User UI updated successfully");
