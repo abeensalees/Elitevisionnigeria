@@ -1,0 +1,7 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/hub", "destination": "/hub/index.html" },
+    { "source": "/(.*)", "destination": "/$1.html" }
+  ]
+}
